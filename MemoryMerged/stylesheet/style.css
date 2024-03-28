@@ -1,0 +1,103 @@
+body {
+  background-color: #3d3d3d;
+  /* background: linear-gradient(to right, #172842, #c22626); */
+  font-family: monospace;
+  font-size: large;
+}
+
+
+/* Background-container for Game field */
+#memeory_Container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* background: linear-gradient(to left, #172842, #7c1616); */
+  background-color: #333333;
+  padding: 15px;
+  border: 1px solid rgb(0, 0, 0);
+  display: none;
+  border-radius: 1rem;
+}
+
+
+/* Style for Memory cards */
+
+.card-container {
+  width: 110px;
+  height: 110px;
+  border: 1px solid rgb(0, 0, 0);
+  object-fit: cover;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  /* background-image: url(/Galaxy.jpg); */
+  object-fit: cover;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  border-radius: 12px;
+  margin: 2px;
+}
+
+
+/* Class for Card containing images */
+/* Only border should be edited */
+.imgContainer {
+  width: 110px;
+  height: 110px;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+}
+
+
+
+/* Javascript necessary classes */
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.static {
+  transform: rotateY(180deg);
+}
+
+.back_face {
+  backface-visibility: hidden;
+}
+
+.back_face {
+  transform: rotateY(180deg);
+}
+
+
+/* Color for selected Memeory Card on the Game field */
+.card-container:hover {
+  background-color: rgb(254, 254, 254);
+}
+
+
+
+/* Container with Infos for Game Stats */
+.scoreboard-container { 
+  width: 200px;
+  height: 600px;
+  background-image: url(/Galaxy.jpg);
+  border-radius: 1rem;
+  position: absolute;
+  top: 21%;
+  left: 1%;
+}
+
+/* Div Boxes with Infos for Game Stats */
+.scoreboard-container > div {
+  display: inline-flex;
+  flex-direction: column;
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  background-color: rgb(54, 52, 52);
+  margin-top: 40px;
+  margin-left: 20px;
+  border-radius: 2rem;
+  text-align: center;
+}
