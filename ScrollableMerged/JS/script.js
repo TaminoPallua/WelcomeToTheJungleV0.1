@@ -39,10 +39,10 @@ let isPLayingSound3 = false;
 let isPLayingSound4 = false;
 
 //AI Voices 
-var station1_AI_Voice = new Audio("/ScrollableMerged/audio/AI-Voices/Station1_Ai_Voice.mp3")
-var station2_AI_Voice = new Audio("/ScrollableMerged/audio/AI-Voices/Station2_Ai_Voice.mp3")
-var station3_AI_Voice = new Audio("/ScrollableMerged/audio/AI-Voices/Station3_Ai_Voice.mp3")
-var station4_AI_Voice = new Audio("/ScrollableMerged/audio/AI-Voices/Station4_Ai_Voice.mp3")
+var station1_AI_Voice = new Audio("/ScrollableMerged/audio/AI-Voices/Station1_KI_Voice.mp3")
+var station2_AI_Voice = new Audio("/ScrollableMerged/audio/AI-Voices/Station2_KI_Voice.mp3")
+var station3_AI_Voice = new Audio("/ScrollableMerged/audio/AI-Voices/Station3_KI_Voice.mp3")
+var station4_AI_Voice = new Audio("/ScrollableMerged/audio/AI-Voices/Station4_KI_Voice.mp3")
 
 //-------------------- MOUSE WHEEL EVENT ----------------------------//
 
