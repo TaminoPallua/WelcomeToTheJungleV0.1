@@ -228,7 +228,7 @@ document.addEventListener('wheel', (event) => {
   }
   function ThirdLevel(e) {
     if (e.key == 'Enter') {
-      window.location = 'index4.html';
+      window.location = '/QuizGame_WTTJ/index.html';
     }
   }
   function FourthLevel(e) {

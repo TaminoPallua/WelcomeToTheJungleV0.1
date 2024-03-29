@@ -16,7 +16,8 @@ let backgroundAudio = new Audio('/CrosswordMerged/audio/Level1Background.mp3');
 
 document.addEventListener('DOMContentLoaded', () => {
   backgroundAudio.play();
-  backgroundAudio.volume = 0.5;
+  backgroundAudio.volume = 0.2;
+  backgroundAudio.loop = true;
 });
 
 function sumbit1() {

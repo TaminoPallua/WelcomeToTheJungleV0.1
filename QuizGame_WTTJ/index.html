@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz-Game</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="btn-container">
+      <button id="easy_btn"><p>Easy</p></button>
+      <button id="medium_btn"><p>Medium</p></button>
+      <button id="hard_btn"><p>Hard</p></button>
+    </div>
+    <div class="wrap-container">
+      <h1>Quiz-Game</h1>
+      <div class="quiz-container">
+        <!-- Question Container stays staitic doesnt need to be changes using JavaScript (style) -->
+        <div id="question-container"><h4 id="questionText"></h4></div>
+        <hr id="break_styleElement" />
+        <!-- Generate needed Elements using JavaScript -->
+        <div id="answerContainer" class="answer-container"></div>
+      </div>
+      <button id="next_btn">Next Question</button>
+    </div>
+
+    <div id="score_container">
+      <h1>Score:</h1>
+      <h2 id="score_h2">0</h2>
+      <h2 id="game-infos">0/0 Questions</h2>
+    </div>
+    <script src="./javascript/script.js"></script>
+  </body>
+</html>
