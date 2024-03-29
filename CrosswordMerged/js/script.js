@@ -221,3 +221,7 @@ document.getElementById('c7').addEventListener('click', () => {
     shownQ5 = false;
   }
 });
+
+document.getElementById("refresh_btn").addEventListener("click", ()=>{
+  window.location = "";
+})

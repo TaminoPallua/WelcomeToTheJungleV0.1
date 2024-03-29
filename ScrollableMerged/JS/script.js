@@ -48,7 +48,7 @@ var station4_AI_Voice = new Audio("/ScrollableMerged/audio/AI-Voices/Station4_KI
 
 document.addEventListener('wheel', (event) => {
   //-------------------- VEHICLE MOVEMENT ----------------------------//
-  isMoving = true;
+  
 
   
   
