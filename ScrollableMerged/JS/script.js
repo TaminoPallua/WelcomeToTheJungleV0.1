@@ -1,5 +1,6 @@
 // CODE SNIPPET
 
+
 //-------------------- BLOCK DEFAULT EVENT ----------------------------//
 window.addEventListener(
   'wheel',
@@ -11,7 +12,6 @@ window.addEventListener(
 
 //-------------------- VEHICLE VARIABLES ----------------------------//
 const vehicle = document.getElementById('vehicle'); // Fahrzeug holen
-console.log(vehicle.naturalWidth);
 let positionX = 50; // Startposition
 let isMoving = false;
 let firstTurned = false; // Schauen ob das Fahrzeug gedreht ist
@@ -49,6 +49,10 @@ var station4_AI_Voice = new Audio("/ScrollableMerged/audio/AI-Voices/Station4_Ai
 document.addEventListener('wheel', (event) => {
   //-------------------- VEHICLE MOVEMENT ----------------------------//
   isMoving = true;
+
+  
+  
+
   let direction = event.deltaY > 0 ? 1 : -1; // Vorwärts oder rückwärts
   // Drehung des Fahrzeuges
   if (direction === 1) {
@@ -169,12 +173,15 @@ document.addEventListener('wheel', (event) => {
   //Vehicle X-Koordinate
   let vehicleRect = vehicle.getBoundingClientRect();
   let xCoordinateVehicle = vehicleRect.left;
+  //Position des Fahrzeges im Session Storage ablegen
+  sessionStorage.setItem("vehicleX", xCoordinateVehicle);
 
 
   //Station 1 -- Erstes Minigame
   let station1 = document.getElementById('Station_1');
   var station1rect = station1.getBoundingClientRect();
   let xCoordinateStation1 = station1rect.left;
+  console.log(`X: ${xCoordinateVehicle}`)
 
   // HiddenBox 1
   let hiddenboxLevel1 = document.getElementById('hiddenBoxLevel1');
@@ -354,5 +361,11 @@ if (
   level3Audio.volume = 0.2;
   engineAudio.volume = 0.03;
 }
+
+window.addEventListener("load", ()=>{
+  if (sessionStorage.getItem('vehicleX')) {
+    xCoordinateVehicle = sessionStorage.getItem("vehicleX")}
+    vehicle.s
+})
  
 });

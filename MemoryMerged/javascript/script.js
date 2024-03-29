@@ -41,7 +41,7 @@ let backgroundAudio = new Audio('/MemoryMerged//audio/Level1Background.mp3');
 
 document.addEventListener('DOMContentLoaded', () => {
   backgroundAudio.play();
-  backgroundAudio.volume = 0.5;
+  backgroundAudio.volume = 0.25;
 });
 
 
@@ -233,3 +233,12 @@ function checkWin() {
 window.addEventListener('DOMContentLoaded', () => {
   StartGame(36);
 });
+
+
+
+//Button for returning to the main page
+
+document.getElementById("return_btn").addEventListener("click", ()=>{
+  window.history.back();
+
+})
