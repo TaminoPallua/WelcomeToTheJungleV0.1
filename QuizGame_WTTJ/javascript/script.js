@@ -247,6 +247,7 @@ const quizLenghts = [4, 7, 10]; // Number of questions in each level of difficul
 //Array of all Difficulties
 const selectedDifficultyArray = [questionsEasy, questionsMedium, questionsHard];
 
+// Function to start the quiz
 function Quiz(difficulty) {
   //Grab difficulty
   selectedDifficulty = difficulty;
@@ -259,6 +260,7 @@ function Quiz(difficulty) {
   ShowQuestions();
 }
 
+// Generates Question preset
 function ShowQuestions() {
   // Grab Question/Answer preset
   let currentQuestion = selectedDifficultyArray[selectedDifficulty][currentQuestionIndex];
@@ -277,6 +279,7 @@ function ShowQuestions() {
   CheckForEndGame();
 }
 
+//Button for next Question set
 document.getElementById('next_btn').addEventListener('click', () => {
   if (!CheckForEndGame() && clickedAnswers == 1) {
     //Delete the Answers from previous Question
@@ -303,6 +306,7 @@ document.getElementById('next_btn').addEventListener('click', () => {
   }
 });
 
+//Resets previous Question preset
 function resetState() {
   //Delete all child Elements of Parent Container
   while (answerContainer.firstChild) {
@@ -312,6 +316,7 @@ function resetState() {
   clickedAnswers = 0;
 }
 
+// Function for diffrent answers ,  and adds click event listener
 function SubmitAnswer() {
   let currentQuestionSet = selectedDifficultyArray[selectedDifficulty][currentQuestionIndex];
   let answerChild;
@@ -341,6 +346,7 @@ function SubmitAnswer() {
   }
 }
 
+// Checks the Game state
 function CheckForEndGame() {
   // console.log(`Questions:${selectedDifficultyArray[selectedDifficulty].length}`)
   if (currentQuestionIndex + 1 == selectedDifficultyArray[selectedDifficulty].length) {
@@ -352,24 +358,28 @@ function CheckForEndGame() {
   }
 }
 
+// Load game with easy difficulty
 document.querySelector('#easy_btn').addEventListener('click', () => {
   Quiz(0);
   sbm_btn.style.visibility = 'visible';
   hr.style.visibility = 'visible';
 });
 
+// Load game with medium difficulty
 document.querySelector('#medium_btn').addEventListener('click', () => {
   Quiz(1);
   sbm_btn.style.visibility = 'visible';
   hr.style.visibility = 'visible';
 });
 
+// Load game with hard difficulty
 document.querySelector('#hard_btn').addEventListener('click', () => {
   Quiz(2);
   sbm_btn.style.visibility = 'visible';
   hr.style.visibility = 'visible';
 });
 
+//Loads the start view
 window.addEventListener('load', () => {
   //Start game
   sbm_btn.style.visibility = 'hidden';
@@ -381,6 +391,7 @@ window.addEventListener('load', () => {
   backgroundMusic.loop = true;
 });
 
+//Builds the scoreboard for user Feedback
 function buildScoreBoard() {
   let scoreBoard_container = document.createElement('div');
   let pInfo = document.createElement('p');
@@ -396,6 +407,7 @@ function buildScoreBoard() {
   answerContainer.appendChild(scoreBoard_container);
 }
 
+//Randomize Question presets
 function shuffleQuestions() {
   questionsEasy.sort(() => Math.random() - 0.5);
   questionsMedium.sort(() => Math.random() - 0.5);
