@@ -132,6 +132,18 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.score_p {
+  font-size: 20px;
+  font-family: 'Courier New', sans-serif;
+  font-weight: bolder;
+  position: absolute;
+  justify-content: center;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, -1%);
+  color: #fff;
+}
+
 /* Break between answer and question board */
 hr {
   margin-bottom: 15%;

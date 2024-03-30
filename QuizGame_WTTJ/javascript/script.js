@@ -265,7 +265,6 @@ function ShowQuestions() {
   let numQuestion = currentQuestionIndex + 1;
   //Display Question
   questionText.innerHTML = `${numQuestion} / ${quizLenghts[selectedDifficulty]}. ${selectedDifficultyArray[selectedDifficulty][currentQuestionIndex].question}`;
-  console.log('triggered');
 
   // Create Answer Buttons using a loop thats going through the answers Array
   currentQuestion.answers.forEach((answer) => {
@@ -293,6 +292,12 @@ document.getElementById('next_btn').addEventListener('click', () => {
     resetState();
     questionText.innerHTML = 'Game Stats:';
     buildScoreBoard();
+    //deactivate Button
+    sbm_btn.style.display = 'none';
+    //Timeout before the site reloads
+    setTimeout(function () {
+      window.location.reload();
+    }, 5000);
   } else {
     alert('Wähle zumindesredt eine Antwort aus!');
   }
@@ -378,12 +383,16 @@ window.addEventListener('load', () => {
 
 function buildScoreBoard() {
   let scoreBoard_container = document.createElement('div');
+  let pInfo = document.createElement('p');
   let scoreTitle = document.createElement('h3');
+  pInfo.innerHTML = 'This page will refresh in 5 seconds';
+  pInfo.classList.add('score_p');
   scoreTitle.classList.add('scoreText');
   scoreTitle.innerHTML = `Your Score: ${score} / ${quizLenghts[selectedDifficulty]}`;
   questionText.style.fontSize = '30px';
   scoreBoard_container.appendChild(scoreTitle);
   scoreBoard_container.classList.add('score_container');
+  answerContainer.appendChild(pInfo);
   answerContainer.appendChild(scoreBoard_container);
 }
 
