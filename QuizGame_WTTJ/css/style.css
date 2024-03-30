@@ -62,24 +62,32 @@ body {
   /* background-color: rgb(111, 129, 137); */
 }
 
+#questionText::First-letter{
+  color: red;
+}
+
+
+
 #next_btn {
   width: 150px;
   height: auto;
   font-family: 'JurassicPark', sans-serif;
   font-size: 30px;
   margin-top: 3%;
+  cursor: pointer ;
 }
 
 .answer-btn {
   transition: all 0.5s ease;
   color: rgb(44, 4, 4);
-  border: 3px solid rgb(54, 39, 39);
+  border: none;
   font-family: 'Montserrat', sans-serif;
   /* text-transform: uppercase; */
   text-align: center;
   line-height: 1;
   font-size: 20px;
-  background-color: transparent;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.85;
   padding: 10px;
   outline: none;
   border-radius: 4px;
@@ -88,46 +96,65 @@ body {
   margin: 30px;
   width: 90%;
   height: 80px;
+  font-family: "Courier New", sans-serif;
+  font-weight:normal;
+  color: black;
+  
 }
 .answer-btn:hover {
-  color: #001f3f;
-  background-color: #fff;
+  color: white;
+  cursor: pointer;
+  background-color: #1e2833;
 }
+
+
+/* Scoreboard related */
 
 #score_container {
   width: 20vh;
-  height: 18vh;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(2px);
+  height: 30vh;
+  background-color: black;
   border-radius: 10px;
   border: 3px solid rgba(255, 255, 255, 50);
-  position: absolute;
-  right: 0;
-  margin: 10% 5%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   
 }
 
-#score_container > h1,h2{
+/* Break between answer and question board */
+hr{
+  margin-bottom: 15%;
+}
+
+
+#score_container > h1{
   font-size: 38px;
   color:#FFF;
-  text-shadow: 2px 2px 2px  red;
   /* top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); */
   
 }
 
-#game-infos{
-  font-size: 25px !important;
+#score_title{
+  text-decoration: underline;
 }
+
+
+
+/* Question board */
 
 #questionText{
   font-size: 20px;
+  font-family: "Courier New", sans-serif;
+  font-weight:bolder;
 }
 
+
+
+/* Buttons for choosing the Level */
 .btn-container > button{
   width: 10vh;
   height: 4vh;
@@ -137,6 +164,7 @@ body {
   -webkit-backdrop-filter: blur(2px);
   border-radius: 10px;
   display: block;
+  cursor: pointer;
 }
 
 .btn-container{
@@ -149,6 +177,14 @@ body {
 }
 
 .btn-container > button > p{
-  font-size: 25px;
+  font-family: "Courier New", sans-serif;
+}
+
+
+/* Info before Game start */
+#h1_info{
   font-family: "JurassicPark", sans-serif;
+  font-size: 70px;
+  text-decoration: underline;
+  color: rgb(96, 15, 15);
 }

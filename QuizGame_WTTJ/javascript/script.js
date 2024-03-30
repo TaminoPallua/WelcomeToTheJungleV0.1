@@ -137,7 +137,7 @@ const questionsMedium = [
 const questionsHard = [
   {
     question:
-      'Hard',
+      'Welchen Prozentsatz der weltweiten Treibhausgasemissionen trägt die Rodung des Urwalds bei?',
     answers: [
       { text: 'Etwa 5%', correct: true },
       { text: 'Etwa 10%', correct: false },
@@ -146,44 +146,94 @@ const questionsHard = [
     ],
   },
   {
-    question: 'Welcher Teil der Welt ist am meisten von der Rodung des Urwalds betroffen?',
+    question:
+      'Welche Art von Luftverschmutzung hat die größte direkte Auswirkung auf die Gesundheit von Waldökosystemen?',
     answers: [
-      { text: 'Nordamerika', correct: true },
-      { text: 'Europa', correct: false },
-      { text: 'Südamerika', correct: false },
-      { text: 'Afrika', correct: false },
+      { text: 'Feinstaubpartikel (PM)', correct: true },
+      { text: 'Stickstoffoxide (NOx)', correct: false },
+      { text: 'Schwefeldioxid (SO2)', correct: false },
+      { text: 'Kohlenmonoxid (CO)', correct: false },
     ],
   },
   {
     question:
-      'Welches Land beheimatet den größten Teil des Amazonas-Regenwaldes?',
+      'Welche der folgenden menschlichen Aktivitäten trägt am meisten zur Verschmutzung von Flüssen und Bächen in Waldgebieten bei?',
     answers: [
-      { text: 'Brasilien', correct: true },
-      { text: 'Australien', correct: false },
-      { text: 'Kanada', correct: false },
-      { text: 'Russland', correct: false },
+      { text: 'Industrielle Abwässer', correct: false },
+      { text: 'Freizeitaktivitäten wie Bootfahren', correct: false },
+      { text: 'Landwirtschaftliche Düngemittel', correct: true },
+      { text: 'Straßenverkehr', correct: false },
     ],
   },
   {
-    question:
-      'Was ist eine bedeutende Funktion von Regenwäldern im Ökosystem?',
+    question: 'Welchen Prozentsatz der weltweiten Treibhausgasemissionen trägt die Rodung des Urwalds bei?',
     answers: [
-      { text: 'Kühlen der Atmosphäre', correct: true },
-      { text: 'Verschmutzung des Wassers', correct: false },
-      { text: 'Reduzierung des Sauerstoffgehalts', correct: false },
-      { text: 'Erhöhung der Wüstenbildung', correct: false },
-    ],
-  },
-  {
-    question:
-      'Wie viel Prozent der weltweiten Artenvielfalt gehen jedes Jahr durch die Rodung des Urwalds ',
-    answers: [
-      { text: 'Etwa 5%', correct: true },
+      { text: 'Etwa 5%', correct: false },
       { text: 'Etwa 10%', correct: false },
-      { text: 'Etwa 15%', correct: false },
+      { text: 'Etwa 15%', correct: true },
       { text: 'Etwa 20%', correct: false },
     ],
   },
+  {
+    question:
+      'Welche Art von Waldverschmutzung hat die größte langfristige Auswirkung auf die Artenvielfalt?',
+    answers: [
+      { text: 'Luftverschmutzung', correct: true },
+      { text: 'Wasserverschmutzung', correct: false },
+      { text: 'Bodenverschmutzung', correct: false },
+      { text: 'Lärmverschmutzung', correct: false },
+    ],
+  },
+  {
+    question:
+      'Welche Strategie ist effektiv, um die Verschmutzung von Waldökosystemen durch nicht abbaubare Kunststoffe zu bekämpfen?',
+    answers: [
+      { text: 'Verbrennung von Kunststoffen vor Ort', correct: false},
+      { text: 'Verwendung biologisch abbaubarer Kunststoffe', correct: true },
+      { text: 'Recycling von Kunststoffen in spezialisierten Anlagen', correct: false },
+      { text: 'Verbot von Kunststoffprodukten in Waldgebieten', correct: false },
+    ],
+  },
+  {
+    question:
+      'Welches ist ein wesentlicher Bestandteil von Luftverschmutzung, der oft übersehen wird, aber dennoch erhebliche Auswirkungen auf Waldökosysteme hat?',
+    answers: [
+      { text: 'Ozon in der Stratosphäre', correct: false },
+      { text: 'Kohlenstoffmonoxid in der Luft', correct: false },
+      { text: 'Feinstaubpartikel in der Atmosphäre', correct: false },
+      { text: 'Stickstoffdioxid in der Troposphäre', correct: true },
+    ],
+  },
+  {
+    question:
+      'Welche Strategie wird oft zur Bekämpfung von Bodenverschmutzung durch Schwermetalle in Waldgebieten angewendet?',
+    answers: [
+      { text: 'Anbau von Schwermetall-toleranten Pflanzenarten', correct: true },
+      { text: 'Bodensanierung durch Chemikalien', correct: false },
+      { text: 'Verstärkte Bewässerung', correct: false },
+      { text: 'Einführung von genetisch modifizierten Mikroorganismen', correct: false },
+    ],
+  },
+  {
+    question:
+      'Welches ist eine der Hauptursachen für die Verschmutzung von Waldgewässern durch Pestizide?',
+    answers: [
+      { text: 'Welches ist eine der Hauptursachen für die Verschmutzung von Waldgewässern durch Pestizide?', correct: false },
+      { text: 'Unkontrollierte Müllentsorgung', correct: false },
+      { text: 'Unkontrollierte Müllentsorgung', correct: false },
+      { text: 'Landwirtschaftliche Sprühflugzeuge', correct: true },
+    ],
+  },
+  {
+    question:
+      'Welches Instrument wird verwendet, um den Kohlenstoffgehalt in einem Waldgebiet zu messen?',
+    answers: [
+      { text: 'Photometer', correct: false },
+      { text: 'Dendrometer', correct: false },
+      { text: 'Carbon-Monitoring-Systeme', correct: true },
+      { text: 'Geigerzähler', correct: false },
+    ],
+  }
 ];
 
 const quizLenghts = [4, 7, 10]; // Number of questions in each level of difficulty 
@@ -206,7 +256,7 @@ function ShowQuestions() {
   let currentQuestion = selectedDifficultyArray[selectedDifficulty][currentQuestionIndex];
   let numQuestion = currentQuestionIndex + 1;
   //Display Question
-  questionText.innerHTML = `${numQuestion}. ${selectedDifficultyArray[selectedDifficulty][currentQuestionIndex].question}`;
+  questionText.innerHTML = `${numQuestion} / ${quizLenghts[selectedDifficulty]}. ${selectedDifficultyArray[selectedDifficulty][currentQuestionIndex].question}`;
   console.log('triggered');
 
   // Create Answer Buttons using a loop thats going through the answers Array
@@ -232,8 +282,9 @@ document.getElementById('next_btn').addEventListener('click', () => {
   }
   //Winning the Game
   else if(CheckForEndGame()){
-    alert("Du hast Gewonnen")
-    Quiz(0);
+    resetState()
+    questionText.innerHTML = "Game Stats:"
+    buildScoreBoard();
   }
   else{
     alert("Wähle zumindest eine Antwort aus!")
@@ -248,11 +299,9 @@ function resetState() {
   }
   //set clicks for answers to 0
   clickedAnswers = 0;
-  console.log(`CounterReset: ${clickedAnswers}`);
 }
 
 function SubmitAnswer() {
-  console.log(`Counter: ${clickedAnswers}`);
   let currentQuestionSet = selectedDifficultyArray[selectedDifficulty][currentQuestionIndex];
   for (let i = 0; i < answerContainer.children.length; i++) {
     answerContainer.children[i].addEventListener('click', () => {
@@ -262,12 +311,10 @@ function SubmitAnswer() {
           score++;
           let correctChild = answerContainer.children[i];
           correctChild.style.backgroundColor = 'green';
-          score_container.innerHTML = score;
         } else {
           clickedAnswers++;
           let wrongChild = answerContainer.children[i];
           wrongChild.style.backgroundColor = 'red';
-          console.log(score);
         }
       }
     });
@@ -317,5 +364,11 @@ window.addEventListener('load', () => {
   backgroundMusic.volume = 0.2;
   backgroundMusic.loop = true;
 });
+
+function buildScoreBoard(){
+  const scoreBoard_container = document.createElement("div");
+  scoreBoard_container.classList.add("score_container");
+  answerContainer.appendChild(scoreBoard_container)
+}
 
 
