@@ -1,9 +1,9 @@
 //HTML Elements
 const answerContainer = document.getElementById('answerContainer');
 const questionText = document.querySelector('#questionText');
-const score_container = document.querySelector('#score_h2')
-const sbm_btn = document.getElementById("next_btn");
-const hr = document.getElementById("break_styleElement");
+const score_container = document.querySelector('#score_h2');
+const sbm_btn = document.getElementById('next_btn');
+const hr = document.getElementById('break_styleElement');
 
 //Global Variables
 let currentQuestionIndex = 0;
@@ -14,16 +14,13 @@ let selectedDifficulty = 0;
 
 //Background music
 
-let backgroundMusic = new Audio("/QuizGame_WTTJ/audio/Level1Background.mp3")
-
-
+let backgroundMusic = new Audio('/QuizGame_WTTJ/audio/Level1Background.mp3');
 
 //Question/Answer Array
 
 const questionsEasy = [
   {
-    question:
-      'Warum ist die Erhaltung der Wälder wichtig für den Klimaschutz?',
+    question: 'Warum ist die Erhaltung der Wälder wichtig für den Klimaschutz?',
     answers: [
       { text: 'Weil Bäume schöne Landschaften schaffen', correct: false },
       { text: 'Weil Wälder wichtige Lebensräume für Tiere sind', correct: false },
@@ -41,12 +38,11 @@ const questionsEasy = [
     ],
   },
   {
-    question:
-      'Was ist eine direkte Auswirkung der Abholzung von Wäldern auf das Klima?',
+    question: 'Was ist eine direkte Auswirkung der Abholzung von Wäldern auf das Klima?',
     answers: [
       { text: 'Zunahme der Artenvielfalt', correct: false },
       { text: 'Verringerung der Bodenerosion', correct: false },
-      { text: 'Freisetzung von Treibhausgasen in die Atmosphäre', correct: true},
+      { text: 'Freisetzung von Treibhausgasen in die Atmosphäre', correct: true },
       { text: 'Erhöhung des Niederschlags', correct: false },
     ],
   },
@@ -56,10 +52,13 @@ const questionsEasy = [
     answers: [
       { text: 'Ausweitung von Palmölplantagen auf gerodeten Waldflächen', correct: false },
       { text: 'Förderung von Holzimporten aus nicht-zertifizierten Quellen', correct: false },
-      { text: 'Reduzierung des Fleischkonsums, um die Nachfrage nach Weideflächen zu verringern', correct: true },
+      {
+        text: 'Reduzierung des Fleischkonsums, um die Nachfrage nach Weideflächen zu verringern',
+        correct: true,
+      },
       { text: 'Förderung von Waldbränden zur Bekämpfung von Schädlingen', correct: false },
     ],
-  }
+  },
 ];
 
 const questionsMedium = [
@@ -74,7 +73,8 @@ const questionsMedium = [
     ],
   },
   {
-    question: 'Welche Maßnahme trägt am meisten zum Klimaschutz bei, indem sie die CO2-Emissionen reduziert und gleichzeitig die Wälder erhält?',
+    question:
+      'Welche Maßnahme trägt am meisten zum Klimaschutz bei, indem sie die CO2-Emissionen reduziert und gleichzeitig die Wälder erhält?',
     answers: [
       { text: 'Einsatz von Elektroautos', correct: false },
       { text: 'Förderung von Recyclingprogrammen', correct: false },
@@ -93,8 +93,7 @@ const questionsMedium = [
     ],
   },
   {
-    question:
-      'Was ist eine bedeutende Funktion von Regenwäldern im Ökosystem?',
+    question: 'Was ist eine bedeutende Funktion von Regenwäldern im Ökosystem?',
     answers: [
       { text: 'Kühlen der Atmosphäre', correct: true },
       { text: 'Verschmutzung des Wassers', correct: false },
@@ -108,7 +107,10 @@ const questionsMedium = [
     answers: [
       { text: 'Internationale Holzhandelsunternehmen', correct: false },
       { text: 'Umweltorganisationen wie Greenpeace und WWF', correct: true },
-      { text: 'Öl- und Gasunternehmen, die Waldflächen für die Exploration nutzen', correct: false },
+      {
+        text: 'Öl- und Gasunternehmen, die Waldflächen für die Exploration nutzen',
+        correct: false,
+      },
       { text: 'Regierungen, die keine Umweltschutzmaßnahmen ergreifen', correct: false },
     ],
   },
@@ -131,7 +133,7 @@ const questionsMedium = [
       { text: 'Australien', correct: false },
       { text: 'Norwegen', correct: false },
     ],
-  }
+  },
 ];
 
 const questionsHard = [
@@ -166,7 +168,8 @@ const questionsHard = [
     ],
   },
   {
-    question: 'Welchen Prozentsatz der weltweiten Treibhausgasemissionen trägt die Rodung des Urwalds bei?',
+    question:
+      'Welchen Prozentsatz der weltweiten Treibhausgasemissionen trägt die Rodung des Urwalds bei?',
     answers: [
       { text: 'Etwa 5%', correct: false },
       { text: 'Etwa 10%', correct: false },
@@ -188,7 +191,7 @@ const questionsHard = [
     question:
       'Welche Strategie ist effektiv, um die Verschmutzung von Waldökosystemen durch nicht abbaubare Kunststoffe zu bekämpfen?',
     answers: [
-      { text: 'Verbrennung von Kunststoffen vor Ort', correct: false},
+      { text: 'Verbrennung von Kunststoffen vor Ort', correct: false },
       { text: 'Verwendung biologisch abbaubarer Kunststoffe', correct: true },
       { text: 'Recycling von Kunststoffen in spezialisierten Anlagen', correct: false },
       { text: 'Verbot von Kunststoffprodukten in Waldgebieten', correct: false },
@@ -218,7 +221,10 @@ const questionsHard = [
     question:
       'Welches ist eine der Hauptursachen für die Verschmutzung von Waldgewässern durch Pestizide?',
     answers: [
-      { text: 'Welches ist eine der Hauptursachen für die Verschmutzung von Waldgewässern durch Pestizide?', correct: false },
+      {
+        text: 'Welches ist eine der Hauptursachen für die Verschmutzung von Waldgewässern durch Pestizide?',
+        correct: false,
+      },
       { text: 'Unkontrollierte Müllentsorgung', correct: false },
       { text: 'Unkontrollierte Müllentsorgung', correct: false },
       { text: 'Landwirtschaftliche Sprühflugzeuge', correct: true },
@@ -233,17 +239,19 @@ const questionsHard = [
       { text: 'Carbon-Monitoring-Systeme', correct: true },
       { text: 'Geigerzähler', correct: false },
     ],
-  }
+  },
 ];
 
-const quizLenghts = [4, 7, 10]; // Number of questions in each level of difficulty 
+const quizLenghts = [4, 7, 10]; // Number of questions in each level of difficulty
 
 //Array of all Difficulties
-const selectedDifficultyArray = [questionsEasy, questionsMedium, questionsHard]
+const selectedDifficultyArray = [questionsEasy, questionsMedium, questionsHard];
 
 function Quiz(difficulty) {
-  //Grab difficulty 
-  selectedDifficulty = difficulty
+  //Grab difficulty
+  selectedDifficulty = difficulty;
+  //Shuffle Question Presets to have diffrent templates
+  shuffleQuestions();
   //Reset Game State
   resetState();
   currentQuestionIndex = 0;
@@ -267,28 +275,26 @@ function ShowQuestions() {
     answerContainer.appendChild(submitButtonAnswer);
   });
   SubmitAnswer();
-  CheckForEndGame()
+  CheckForEndGame();
 }
 
 document.getElementById('next_btn').addEventListener('click', () => {
-  if(!CheckForEndGame() && clickedAnswers == 1){
-  //Delete the Answers from previous Question
-  resetState();
-  //Load new Answers + Question
-  currentQuestionIndex++;
-  //Show new Questions
-  ShowQuestions();
-  //Check if end is reached
+  if (!CheckForEndGame() && clickedAnswers == 1) {
+    //Delete the Answers from previous Question
+    resetState();
+    //Load new Answers + Question
+    currentQuestionIndex++;
+    //Show new Questions
+    ShowQuestions();
+    //Check if end is reached
   }
   //Winning the Game
-  else if(CheckForEndGame()){
-    resetState()
-    questionText.innerHTML = "Game Stats:"
+  else if (CheckForEndGame()) {
+    resetState();
+    questionText.innerHTML = 'Game Stats:';
     buildScoreBoard();
-  }
-  else{
-    alert("Wähle zumindest eine Antwort aus!")
-
+  } else {
+    alert('Wähle zumindesredt eine Antwort aus!');
   }
 });
 
@@ -303,7 +309,12 @@ function resetState() {
 
 function SubmitAnswer() {
   let currentQuestionSet = selectedDifficultyArray[selectedDifficulty][currentQuestionIndex];
+  let answerChild;
   for (let i = 0; i < answerContainer.children.length; i++) {
+    if (currentQuestionSet.answers[i].correct == true) {
+      //Grab the correct answer child
+      answerChild = answerContainer.children[i];
+    }
     answerContainer.children[i].addEventListener('click', () => {
       if (clickedAnswers < 1) {
         if (currentQuestionSet.answers[i].correct == true) {
@@ -315,6 +326,10 @@ function SubmitAnswer() {
           clickedAnswers++;
           let wrongChild = answerContainer.children[i];
           wrongChild.style.backgroundColor = 'red';
+          //Show right answer
+
+          wrongChild.style.textDecoration = 'line-through';
+          answerChild.style.backgroundColor = 'green';
         }
       }
     });
@@ -322,53 +337,58 @@ function SubmitAnswer() {
 }
 
 function CheckForEndGame() {
-  
-    // console.log(`Questions:${selectedDifficultyArray[selectedDifficulty].length}`)
-    if(currentQuestionIndex+1 == selectedDifficultyArray[selectedDifficulty].length){
-      // alert("End")
-      sbm_btn.innerHTML = "Finish"
-      return true;
-    }
-    else{
-      return false;
-    }
+  // console.log(`Questions:${selectedDifficultyArray[selectedDifficulty].length}`)
+  if (currentQuestionIndex + 1 == selectedDifficultyArray[selectedDifficulty].length) {
+    // alert("End")
+    sbm_btn.innerHTML = 'Finish';
+    return true;
+  } else {
+    return false;
+  }
 }
 
-document.querySelector("#easy_btn").addEventListener("click", ()=>{
-  Quiz(0)
-  sbm_btn.style.visibility = "visible"
-  hr.style.visibility = "visible";
-})
+document.querySelector('#easy_btn').addEventListener('click', () => {
+  Quiz(0);
+  sbm_btn.style.visibility = 'visible';
+  hr.style.visibility = 'visible';
+});
 
-document.querySelector("#medium_btn").addEventListener("click", ()=>{
-  Quiz(1)
-  sbm_btn.style.visibility = "visible"
-  hr.style.visibility = "visible";
-})
+document.querySelector('#medium_btn').addEventListener('click', () => {
+  Quiz(1);
+  sbm_btn.style.visibility = 'visible';
+  hr.style.visibility = 'visible';
+});
 
-document.querySelector("#hard_btn").addEventListener("click", ()=>{
-  Quiz(2)
-  sbm_btn.style.visibility = "visible"
-  hr.style.visibility = "visible";
-})
-
-
+document.querySelector('#hard_btn').addEventListener('click', () => {
+  Quiz(2);
+  sbm_btn.style.visibility = 'visible';
+  hr.style.visibility = 'visible';
+});
 
 window.addEventListener('load', () => {
   //Start game
-  sbm_btn.style.visibility = "hidden";
-  hr.style.visibility = "hidden";
+  sbm_btn.style.visibility = 'hidden';
+  hr.style.visibility = 'hidden';
 
   //StartBackgroundMusic
-  backgroundMusic.play()
+  backgroundMusic.play();
   backgroundMusic.volume = 0.2;
   backgroundMusic.loop = true;
 });
 
-function buildScoreBoard(){
-  const scoreBoard_container = document.createElement("div");
-  scoreBoard_container.classList.add("score_container");
-  answerContainer.appendChild(scoreBoard_container)
+function buildScoreBoard() {
+  let scoreBoard_container = document.createElement('div');
+  let scoreTitle = document.createElement('h3');
+  scoreTitle.classList.add('scoreText');
+  scoreTitle.innerHTML = `Your Score: ${score} / ${quizLenghts[selectedDifficulty]}`;
+  questionText.style.fontSize = '30px';
+  scoreBoard_container.appendChild(scoreTitle);
+  scoreBoard_container.classList.add('score_container');
+  answerContainer.appendChild(scoreBoard_container);
 }
 
-
+function shuffleQuestions() {
+  questionsEasy.sort(() => Math.random() - 0.5);
+  questionsMedium.sort(() => Math.random() - 0.5);
+  questionsHard.sort(() => Math.random() - 0.5);
+}
