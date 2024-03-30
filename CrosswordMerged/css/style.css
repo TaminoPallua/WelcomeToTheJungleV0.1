@@ -1,6 +1,6 @@
 body {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -11,8 +11,7 @@ body {
   background-repeat: no-repeat;
 }
 
-
-.container{
+.container {
   justify-content: center;
 }
 
@@ -34,7 +33,7 @@ h2 {
 }
 
 /* Background Image */
-#BackgroundImage{
+#BackgroundImage {
   position: fixed;
   top: 0;
   left: 0;
@@ -64,8 +63,6 @@ table {
   margin: 0 auto;
 } */
 
-
-
 /* Eingabefeld, Button und generell der ganze Container wird hier gestyled*/
 
 .input-container {
@@ -87,7 +84,6 @@ table {
 }
 
 .btnsubmitstyle {
-  
   height: 35px;
   width: 90px;
   font-weight: bold;
@@ -110,7 +106,6 @@ table {
   font-family: 'JurassicPark';
   src: url('/CrosswordMerged/fonts/Jurassic_Park.ttf') format('truetype');
 }
-
 
 /* Einzelne Felder bzw auch die Questionboxen werden hier gestyled */
 
@@ -151,28 +146,28 @@ table {
   -webkit-backdrop-filter: blur(15px);
 }
 
-#a2{
+#a2 {
   background-image: url('../images/imgNr1.png');
   background-size: cover;
 }
-#e2{
+#e2 {
   background-image: url('../images/imgNr2.png');
   background-size: cover;
 }
-#e4{
+#e4 {
   background-image: url('../images/imgNr3.png');
   background-size: cover;
 }
-#e5{
+#e5 {
   background-image: url('../images/imgNr4.png');
   background-size: cover;
 }
-#c7{
+#c7 {
   background-image: url('../images/imgNr5.png');
   background-size: cover;
 }
 
-#hiddenBoxQ1{
+#hiddenBoxQ1 {
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -181,37 +176,43 @@ table {
   border-radius: 10px;
   border: 3px solid rgba(255, 255, 255, 50);
 }
-#hiddenBoxQ2{
+#hiddenBoxQ2 {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   border-radius: 10px;
   border: 3px solid rgba(255, 255, 255, 50);
+  height: auto;
+  width: 62.5vh;
 }
-#hiddenBoxQ3{
+#hiddenBoxQ3 {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   border-radius: 10px;
   border: 3px solid rgba(255, 255, 255, 50);
+  height: auto;
+  width: 62.5vh;
 }
-#hiddenBoxQ4{
+#hiddenBoxQ4 {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   border-radius: 10px;
   border: 3px solid rgba(255, 255, 255, 50);
+  height: auto;
+  width: 62.5vh;
 }
-#hiddenBoxQ5{
+#hiddenBoxQ5 {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   border-radius: 10px;
   border: 3px solid rgba(255, 255, 255, 50);
+  height: auto;
+  width: 62.5vh;
 }
-
-
