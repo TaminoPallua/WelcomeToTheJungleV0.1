@@ -4,6 +4,17 @@ body {
   padding: 2px;
 }
 
+@media (max-width: 2560px) {
+  #vehicle {
+    margin-top: 20vh !important;
+  }
+}
+
+@media (max-width: 1920px) {
+  #vehicle {
+    margin-top: 12vh !important;
+  }
+}
 
 #vehicle {
   width: 280px;
@@ -28,8 +39,6 @@ body {
   left: 68%;
   z-index: 0;
 }
-
-
 
 #Station_2 {
   width: 280px;
