@@ -75,8 +75,11 @@ body {
   height: auto;
   font-family: 'JurassicPark', sans-serif;
   font-size: 30px;
-  margin-top: 3%;
   cursor: pointer;
+  position: absolute;
+  top: 96%;
+  left: 50%;
+  transform: translate(-50%, -90%);
 }
 
 /* Possible answers for Question */
@@ -88,7 +91,7 @@ body {
   /* text-transform: uppercase; */
   text-align: center;
   line-height: 1;
-  font-size: 20px;
+  font-size: 15px;
   background-color: rgb(255, 255, 255);
   opacity: 0.85;
   padding: 10px;
@@ -96,15 +99,15 @@ body {
   border-radius: 4px;
   display: flex;
   flex-direction: row;
-  margin: 30px;
+  margin: 25px;
   width: 90%;
-  height: 80px;
+  height: 60px;
   font-family: 'Courier New', sans-serif;
   font-weight: normal;
   color: black;
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .answer-btn {
     width: 80%;
     height: 60px;
@@ -121,7 +124,7 @@ body {
   #hard_btn {
     display: none;
   }
-}
+} */
 .answer-btn:hover {
   color: white;
   cursor: pointer;
@@ -172,7 +175,7 @@ hr {
 /* Question board */
 
 #questionText {
-  font-size: 20px;
+  font-size: 15px;
   font-family: 'Courier New', sans-serif;
   font-weight: bolder;
 }
