@@ -11,6 +11,7 @@ let score = 0;
 let clickedAnswers = 0;
 // Selected Difficulty (Default is Easy)
 let selectedDifficulty = 0;
+let blockLevelButtons = false;
 
 //Background music
 
@@ -221,12 +222,9 @@ const questionsHard = [
     question:
       'Welches ist eine der Hauptursachen für die Verschmutzung von Waldgewässern durch Pestizide?',
     answers: [
-      {
-        text: 'Welches ist eine der Hauptursachen für die Verschmutzung von Waldgewässern durch Pestizide?',
-        correct: false,
-      },
+      { text: 'Auslaufen von Ölbohrplattformen', correct: false },
       { text: 'Unkontrollierte Müllentsorgung', correct: false },
-      { text: 'Unkontrollierte Müllentsorgung', correct: false },
+      { text: 'Industrielle Abwasserkanäle', correct: false },
       { text: 'Landwirtschaftliche Sprühflugzeuge', correct: true },
     ],
   },
@@ -249,6 +247,7 @@ const selectedDifficultyArray = [questionsEasy, questionsMedium, questionsHard];
 
 // Function to start the quiz
 function Quiz(difficulty) {
+  blockLevelButtons = false;
   //Grab difficulty
   selectedDifficulty = difficulty;
   //Shuffle Question Presets to have diffrent templates
@@ -300,7 +299,7 @@ document.getElementById('next_btn').addEventListener('click', () => {
     //Timeout before the site reloads
     setTimeout(function () {
       window.location.reload();
-    }, 5000);
+    }, 3000);
   } else {
     alert('Wähle zumindesredt eine Antwort aus!');
   }
@@ -360,23 +359,29 @@ function CheckForEndGame() {
 
 // Load game with easy difficulty
 document.querySelector('#easy_btn').addEventListener('click', () => {
-  Quiz(0);
-  sbm_btn.style.visibility = 'visible';
-  hr.style.visibility = 'visible';
+  if (!blockLevelButtons) {
+    Quiz(0);
+    sbm_btn.style.visibility = 'visible';
+    hr.style.visibility = 'visible';
+  }
 });
 
 // Load game with medium difficulty
 document.querySelector('#medium_btn').addEventListener('click', () => {
-  Quiz(1);
-  sbm_btn.style.visibility = 'visible';
-  hr.style.visibility = 'visible';
+  if (!blockLevelButtons) {
+    Quiz(1);
+    sbm_btn.style.visibility = 'visible';
+    hr.style.visibility = 'visible';
+  }
 });
 
 // Load game with hard difficulty
 document.querySelector('#hard_btn').addEventListener('click', () => {
-  Quiz(2);
-  sbm_btn.style.visibility = 'visible';
-  hr.style.visibility = 'visible';
+  if (!blockLevelButtons) {
+    Quiz(2);
+    sbm_btn.style.visibility = 'visible';
+    hr.style.visibility = 'visible';
+  }
 });
 
 //Loads the start view
@@ -393,10 +398,12 @@ window.addEventListener('load', () => {
 
 //Builds the scoreboard for user Feedback
 function buildScoreBoard() {
+  //block  level buttons to prevent further interaction during this process
+  blockLevelButtons = true;
   let scoreBoard_container = document.createElement('div');
   let pInfo = document.createElement('p');
   let scoreTitle = document.createElement('h3');
-  pInfo.innerHTML = 'This page will refresh in 5 seconds';
+  pInfo.innerHTML = 'This page will refresh in 3 seconds';
   pInfo.classList.add('score_p');
   scoreTitle.classList.add('scoreText');
   scoreTitle.innerHTML = `Your Score: ${score} / ${quizLenghts[selectedDifficulty]}`;
@@ -412,4 +419,15 @@ function shuffleQuestions() {
   questionsEasy.sort(() => Math.random() - 0.5);
   questionsMedium.sort(() => Math.random() - 0.5);
   questionsHard.sort(() => Math.random() - 0.5);
+
+  //Randomize Answer presets
+  for (let i = 0; i < questionsEasy.length; i++) {
+    questionsEasy[i].answers.sort(() => Math.random() - 0.5);
+  }
+  for (let i = 0; i < questionsMedium.length; i++) {
+    questionsMedium[i].answers.sort(() => Math.random() - 0.5);
+  }
+  for (let i = 0; i < questionsHard.length; i++) {
+    questionsHard[i].answers.sort(() => Math.random() - 0.5);
+  }
 }
