@@ -37,6 +37,21 @@ body {
   border-radius: 22px;
 }
 
+@media (max-width: 1920px) {
+  /* Makes the container look good on small screens */
+  #questionText {
+    font-size: 15px !important;
+  }
+  .answer-btn {
+    margin: 25px 4 !important;
+    height: 60px !important;
+    font-size: 15px !important;
+  }
+  #next_btn {
+    font-size: 22px !important;
+  }
+}
+
 .wrap-container > h1 {
   color: rgb(44, 4, 4);
   font-variant: small-caps;
@@ -91,7 +106,7 @@ body {
   /* text-transform: uppercase; */
   text-align: center;
   line-height: 1;
-  font-size: 15px;
+  font-size: 20px;
   background-color: rgb(255, 255, 255);
   opacity: 0.85;
   padding: 10px;
@@ -99,9 +114,9 @@ body {
   border-radius: 4px;
   display: flex;
   flex-direction: row;
-  margin: 25px;
+  margin: 30px;
   width: 90%;
-  height: 60px;
+  height: 80px;
   font-family: 'Courier New', sans-serif;
   font-weight: normal;
   color: black;
@@ -175,7 +190,7 @@ hr {
 /* Question board */
 
 #questionText {
-  font-size: 15px;
+  font-size: 20px;
   font-family: 'Courier New', sans-serif;
   font-weight: bolder;
 }
