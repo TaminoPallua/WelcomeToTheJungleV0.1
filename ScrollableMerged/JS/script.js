@@ -1,6 +1,5 @@
 // CODE SNIPPET
 
-
 //-------------------- BLOCK DEFAULT EVENT ----------------------------//
 window.addEventListener(
   'wheel',
@@ -38,20 +37,16 @@ let isPLayingSound2 = false;
 let isPLayingSound3 = false;
 let isPLayingSound4 = false;
 
-//AI Voices 
-var station1_AI_Voice = new Audio("/ScrollableMerged/audio/AI-Voices/Station1_KI_Voice.mp3")
-var station2_AI_Voice = new Audio("/ScrollableMerged/audio/AI-Voices/Station2_KI_Voice.mp3")
-var station3_AI_Voice = new Audio("/ScrollableMerged/audio/AI-Voices/Station3_KI_Voice.mp3")
-var station4_AI_Voice = new Audio("/ScrollableMerged/audio/AI-Voices/Station4_KI_Voice.mp3")
+//AI Voices
+var station1_AI_Voice = new Audio('/ScrollableMerged/audio/AI-Voices/Station1_KI_Voice.mp3');
+var station2_AI_Voice = new Audio('/ScrollableMerged/audio/AI-Voices/Station2_KI_Voice.mp3');
+var station3_AI_Voice = new Audio('/ScrollableMerged/audio/AI-Voices/Station3_KI_Voice.mp3');
+var station4_AI_Voice = new Audio('/ScrollableMerged/audio/AI-Voices/Station4_KI_Voice.mp3');
 
 //-------------------- MOUSE WHEEL EVENT ----------------------------//
 
 document.addEventListener('wheel', (event) => {
   //-------------------- VEHICLE MOVEMENT ----------------------------//
-  
-
-  
-  
 
   let direction = event.deltaY > 0 ? 1 : -1; // Vorwärts oder rückwärts
   // Drehung des Fahrzeuges
@@ -174,14 +169,13 @@ document.addEventListener('wheel', (event) => {
   let vehicleRect = vehicle.getBoundingClientRect();
   let xCoordinateVehicle = vehicleRect.left;
   //Position des Fahrzeges im Session Storage ablegen
-  sessionStorage.setItem("vehicleX", xCoordinateVehicle);
-
+  sessionStorage.setItem('vehicleX', xCoordinateVehicle);
 
   //Station 1 -- Erstes Minigame
   let station1 = document.getElementById('Station_1');
   var station1rect = station1.getBoundingClientRect();
   let xCoordinateStation1 = station1rect.left;
-  console.log(`X: ${xCoordinateVehicle}`)
+  console.log(`X: ${xCoordinateVehicle}`);
 
   // HiddenBox 1
   let hiddenboxLevel1 = document.getElementById('hiddenBoxLevel1');
@@ -207,15 +201,19 @@ document.addEventListener('wheel', (event) => {
   // HiddenBox 4
   let hiddenboxLevel4 = document.getElementById('hiddenBoxLevel4');
 
-  
   //Funktionen die einen zu den Minigames leitet
 
-  //Standard EventListener to return to Start page if the User clicks outside of any GameArea (Minigame)  
-  function ReturnToStart(e){
-    if(e.key == "Enter"){
-      window.location = "";
+  //Standard EventListener to return to Start page if the User clicks outside of any GameArea (Minigame)
+  function ReturnToStart(e) {
+    if (e.key == 'Enter') {
+      window.location.reload();
     }
   }
+
+  //Scroll to top of the page before it reloads
+  window.onbeforeunload = () => {
+    window.scrollTo(0, 0);
+  };
   function FirstLevel(e) {
     if (e.key == 'Enter') {
       window.location = '/MemoryMerged/index.html';
@@ -243,22 +241,20 @@ document.addEventListener('wheel', (event) => {
     xCoordinateVehicle <= xCoordinateStation1 + 280 &&
     level == 0
   ) {
-
     //Unhide info box
     hiddenboxLevel1.style.display = 'block';
     //Add Event
     window.addEventListener('keypress', FirstLevel);
-    
+
     //---Noises---//
     //Lower Background sounds
     level0Audio.volume = 0.1;
     engineAudio.volume = 0.015;
 
-    //Start AI Voice 
+    //Start AI Voice
     station1_AI_Voice.play();
     station1_AI_Voice.volume = 0.7;
-
-  } else if(level == 0){
+  } else if (level == 0) {
     window.addEventListener('keypress', ReturnToStart);
     hiddenboxLevel1.style.display = 'none';
     //Reset AI Voice
@@ -269,29 +265,27 @@ document.addEventListener('wheel', (event) => {
     engineAudio.volume = 0.03;
   }
 
-//Station 2
+  //Station 2
 
   if (
     xCoordinateVehicle + 150 >= xCoordinateStation2 &&
     xCoordinateVehicle <= xCoordinateStation2 + 280 &&
     level == 1
   ) {
-
     //Unhide info box
     hiddenboxLevel2.style.display = 'block';
     //Add Event
     window.addEventListener('keypress', SecondLevel);
-    
+
     //---Noises---//
     //Lower Background sounds
     level1Audio.volume = 0.1;
     engineAudio.volume = 0.015;
 
-    //Start AI Voice 
+    //Start AI Voice
     station2_AI_Voice.play();
     station2_AI_Voice.volume = 0.7;
-
-  } else if(level == 1){
+  } else if (level == 1) {
     window.addEventListener('keypress', ReturnToStart);
     hiddenboxLevel2.style.display = 'none';
     //Reset AI Voice
@@ -302,70 +296,69 @@ document.addEventListener('wheel', (event) => {
     engineAudio.volume = 0.03;
   }
 
+  //Station 3
+  if (
+    xCoordinateVehicle + 150 >= xCoordinateStation3 &&
+    xCoordinateVehicle <= xCoordinateStation3 + 280 &&
+    level == 2
+  ) {
+    hiddenboxLevel3.style.display = 'block';
+    window.addEventListener('keypress', ThirdLevel);
 
-//Station 3
-if (
-  xCoordinateVehicle + 150 >= xCoordinateStation3 &&
-  xCoordinateVehicle <= xCoordinateStation3 + 280 &&
-  level == 2
-) {
-  hiddenboxLevel3.style.display = 'block';
-  window.addEventListener('keypress', ThirdLevel);
+    //---Noises---//
+    //Lower Background sounds
+    level2Audio.volume = 0.1;
+    engineAudio.volume = 0.015;
 
-  //---Noises---//
-  //Lower Background sounds
-  level2Audio.volume = 0.1;
-  engineAudio.volume = 0.015;
+    //Start AI Voice
+    station3_AI_Voice.play();
+    station3_AI_Voice.volume = 0.7;
+  } else if (level == 2) {
+    window.addEventListener('keypress', ReturnToStart);
+    hiddenboxLevel3.style.display = 'none';
 
-   //Start AI Voice 
-   station3_AI_Voice.play();
-   station3_AI_Voice.volume = 0.7;
-} else if(level == 2){
-  window.addEventListener('keypress', ReturnToStart);
-  hiddenboxLevel3.style.display = 'none';
+    //Reset AI Voice
+    station3_AI_Voice.pause();
+    station3_AI_Voice.currentTime = 0;
+    //Set volume of Background noises to default
+    level2Audio.volume = 0.2;
+    engineAudio.volume = 0.03;
+  }
 
-  //Reset AI Voice
-  station3_AI_Voice.pause();
-  station3_AI_Voice.currentTime = 0;
-  //Set volume of Background noises to default
-  level2Audio.volume = 0.2;
-  engineAudio.volume = 0.03;
-}
+  //Station 4
+  if (
+    xCoordinateVehicle + 50 >= xCoordinateStation4 &&
+    xCoordinateVehicle <= xCoordinateStation4 + 280 &&
+    level == 3
+  ) {
+    hiddenboxLevel4.style.display = 'block';
+    window.addEventListener('keypress', FourthLevel);
 
-//Station 4
-if (
-  xCoordinateVehicle + 150 >= xCoordinateStation4 &&
-  xCoordinateVehicle <= xCoordinateStation4 + 280 &&
-  level == 3
-) {
-  hiddenboxLevel4.style.display = 'block';
-  window.addEventListener('keypress', FourthLevel);
+    //---Noises---//
+    //Lower Background sounds
+    level3Audio.volume = 0.1;
+    engineAudio.volume = 0.015;
 
-  //---Noises---//
-  //Lower Background sounds
-  level3Audio.volume = 0.1;
-  engineAudio.volume = 0.015;
+    //Start AI Voice
+    station4_AI_Voice.play();
+    station4_AI_Voice.volume = 0.7;
+  } else if (level == 3) {
+    window.addEventListener('keypress', ReturnToStart);
+    hiddenboxLevel4.style.display = 'none';
 
-  //Start AI Voice 
-  station4_AI_Voice.play();
-  station4_AI_Voice.volume = 0.7;
-} else if(level == 3){
-  window.addEventListener('keypress', ReturnToStart);
-  hiddenboxLevel4.style.display = 'none';
+    //Reset AI Voice
+    station4_AI_Voice.pause();
+    station4_AI_Voice.currentTime = 0;
 
-  //Reset AI Voice
-  station4_AI_Voice.pause();
-  station4_AI_Voice.currentTime = 0;
+    //Set volume of Background noises to default
+    level3Audio.volume = 0.2;
+    engineAudio.volume = 0.03;
+  }
 
-  //Set volume of Background noises to default
-  level3Audio.volume = 0.2;
-  engineAudio.volume = 0.03;
-}
-
-window.addEventListener("load", ()=>{
-  if (sessionStorage.getItem('vehicleX')) {
-    xCoordinateVehicle = sessionStorage.getItem("vehicleX")}
-    vehicle.s
-})
- 
+  window.addEventListener('load', () => {
+    if (sessionStorage.getItem('vehicleX')) {
+      xCoordinateVehicle = sessionStorage.getItem('vehicleX');
+    }
+    vehicle.s;
+  });
 });
