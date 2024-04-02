@@ -1,0 +1,17 @@
+body {
+  background-color: rgb(91, 115, 83);
+}
+
+#header_h1 {
+  font-family: JurassicPark, sans-serif;
+  font-weight: bold;
+  font-size: 100px;
+  text-decoration: underline;
+  color: rgb(96, 15, 15);
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'JurassicPark';
+  src: url(/Jump_And_RunMerged/fonts/Jurassic_Park.ttf);
+}

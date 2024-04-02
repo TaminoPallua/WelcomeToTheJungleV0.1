@@ -231,7 +231,7 @@ document.addEventListener('wheel', (event) => {
   }
   function FourthLevel(e) {
     if (e.key == 'Enter') {
-      window.location = 'index5.html';
+      window.location = '/Jump_And_RunMerged/index.html';
     }
   }
 
