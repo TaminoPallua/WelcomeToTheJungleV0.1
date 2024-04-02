@@ -44,7 +44,7 @@ body {
   }
   .answer-btn {
     margin: 25px 4 !important;
-    height: 60px !important;
+    height: 6vh !important;
     font-size: 15px !important;
   }
   #next_btn {
@@ -116,7 +116,7 @@ body {
   flex-direction: row;
   margin: 30px;
   width: 90%;
-  height: 80px;
+  height: 10vh;
   font-family: 'Courier New', sans-serif;
   font-weight: normal;
   color: black;
