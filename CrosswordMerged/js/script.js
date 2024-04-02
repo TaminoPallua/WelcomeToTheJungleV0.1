@@ -225,3 +225,7 @@ document.getElementById('c7').addEventListener('click', () => {
 document.getElementById("refresh_btn").addEventListener("click", ()=>{
   window.location = "";
 })
+
+function goBack() {
+  window.history.back();
+}
