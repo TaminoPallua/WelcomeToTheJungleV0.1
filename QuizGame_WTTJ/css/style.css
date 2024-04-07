@@ -52,6 +52,23 @@ body {
   }
 }
 
+@media (max-width: 2560px) {
+  /* Makes the container look good on small screens */
+  #questionText {
+    font-size: 20px !important;
+  }
+  .answer-btn {
+    margin: 25px 4 !important;
+    height: 8vh !important;
+    font-size: 20px !important;
+  }
+  #next_btn {
+    font-size: 24px !important;
+  }
+}
+
+
+
 .wrap-container > h1 {
   color: rgb(44, 4, 4);
   font-variant: small-caps;
@@ -115,31 +132,15 @@ body {
   display: flex;
   flex-direction: row;
   margin: 30px;
-  width: 90%;
+  max-width: 500px;
+  width: 100%;
   height: 10vh;
   font-family: 'Courier New', sans-serif;
   font-weight: normal;
   color: black;
 }
 
-/* @media (max-width: 1024px) {
-  .answer-btn {
-    width: 80%;
-    height: 60px;
-  }
-  #next_btn {
-    margin: -10%;
-  }
-}
 
-@media (max-height: 1000px) {
-  .wrap-container,
-  #easy_btn,
-  #medium_btn,
-  #hard_btn {
-    display: none;
-  }
-} */
 .answer-btn:hover {
   color: white;
   cursor: pointer;
