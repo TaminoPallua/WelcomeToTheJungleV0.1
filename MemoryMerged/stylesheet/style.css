@@ -109,7 +109,7 @@ body {
 
 /* Color for selected Memeory Card on the Game field */
 .card-container:hover {
-  background-color: rgb(254, 254, 254);
+  background-color: rgb(10, 74, 48);
 }
 
 /* Container with Infos for Game Stats */
