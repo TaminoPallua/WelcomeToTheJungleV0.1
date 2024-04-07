@@ -5,6 +5,18 @@ body {
   font-size: large;
 }
 
+@media (max-width: 1920px) {
+  .card-container {
+    margin: 1px !important;
+  }
+  #top-header {
+    font-size: 90px !important;
+  }
+  #head-container {
+    margin-top: 0 !important;
+  }
+}
+
 #BackgroundImage {
   position: fixed;
   top: 0;
@@ -28,7 +40,6 @@ body {
   font-family: 'JurassicPark', sans-serif;
   margin: 0 auto;
   position: relative;
-  z-index: 1;
 }
 
 /* Background-container for Game field */
@@ -169,8 +180,8 @@ body {
   -webkit-backdrop-filter: blur(2px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 50);
-  width: 10%;
-  height: 50%;
+  width: 10vw;
+  height: 50vh;
   border: 1px solid black;
   justify-content: center;
   text-align: center;
@@ -188,6 +199,7 @@ body {
   font-size: 26px;
   cursor: pointer;
   border-radius: 1rem;
+  width: auto;
   background-color: #333333;
   border: 1px solid rgb(66, 62, 62);
   padding: 10px 30px 10px 30px;
@@ -198,6 +210,9 @@ body {
   top: 95%;
   left: 50%;
   transform: translate(-50%, -95%);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 #button-container > button:hover {
