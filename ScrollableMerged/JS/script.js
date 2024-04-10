@@ -26,6 +26,11 @@ if (levelGlobal == undefined) {
 let ebenen = 4; // Gesamtanzahl Ebenen
 const levelHeight = 100 / ebenen; // Höhe jeder Ebene in vh (Viewport Height), für 4 Ebenen
 
+//-------------------- MISSION TERMINAL VARIABLES ----------------------------//
+
+const body = document.body;
+let isEventListenerAdded = false;
+
 //  //-------------------- AUDIO VARIABLES ----------------------------//
 var engineAudio = new Audio('/ScrollableMerged/audio/BackgroundNoises/EngineSound.mp3');
 var level0Audio = new Audio('/ScrollableMerged/audio/BackgroundNoises/Level0Background.mp3');
@@ -175,7 +180,7 @@ document.addEventListener('wheel', (event) => {
   let station1 = document.getElementById('Station_1');
   var station1rect = station1.getBoundingClientRect();
   let xCoordinateStation1 = station1rect.left;
-  console.log(`X: ${xCoordinateVehicle}`);
+  // console.log(`X: ${xCoordinateVehicle}`);
 
   // HiddenBox 1
   let hiddenboxLevel1 = document.getElementById('hiddenBoxLevel1');
@@ -201,39 +206,10 @@ document.addEventListener('wheel', (event) => {
   // HiddenBox 4
   let hiddenboxLevel4 = document.getElementById('hiddenBoxLevel4');
 
-  //Funktionen die einen zu den Minigames leitet
-
-  //Standard EventListener to return to Start page if the User clicks outside of any GameArea (Minigame)
-  function ReturnToStart(e) {
-    if (e.key == 'Enter') {
-      window.location.reload();
-    }
-  }
-
   //Scroll to top of the page before it reloads
   window.onbeforeunload = () => {
     window.scrollTo(0, 0);
   };
-  function FirstLevel(e) {
-    if (e.key == 'Enter') {
-      window.location = '/MemoryMerged/index.html';
-    }
-  }
-  function SecondLevel(e) {
-    if (e.key == 'Enter') {
-      window.location = '/CrosswordMerged/index.html';
-    }
-  }
-  function ThirdLevel(e) {
-    if (e.key == 'Enter') {
-      window.location = '/QuizGame_WTTJ/index.html';
-    }
-  }
-  function FourthLevel(e) {
-    if (e.key == 'Enter') {
-      window.location = '/Jump_And_RunMerged/index.html';
-    }
-  }
 
   //Station 1
   if (
@@ -241,11 +217,13 @@ document.addEventListener('wheel', (event) => {
     xCoordinateVehicle <= xCoordinateStation1 + 280 &&
     level == 0
   ) {
+    //Add EventListener only one time
+    if (!isEventListenerAdded) {
+      window.addEventListener('keypress', FirstLevel);
+      isEventListenerAdded = true;
+    }
     //Unhide info box
     hiddenboxLevel1.style.display = 'block';
-    //Add Event
-    window.addEventListener('keypress', FirstLevel);
-
     //---Noises---//
     //Lower Background sounds
     level0Audio.volume = 0.1;
@@ -255,7 +233,11 @@ document.addEventListener('wheel', (event) => {
     station1_AI_Voice.play();
     station1_AI_Voice.volume = 0.7;
   } else if (level == 0) {
-    window.addEventListener('keypress', ReturnToStart);
+    //Remove EventListener
+    if (isEventListenerAdded) {
+      window.removeEventListener('keypress', FirstLevel);
+      isEventListenerAdded = false;
+    }
     hiddenboxLevel1.style.display = 'none';
     //Reset AI Voice
     station1_AI_Voice.pause();
@@ -275,7 +257,10 @@ document.addEventListener('wheel', (event) => {
     //Unhide info box
     hiddenboxLevel2.style.display = 'block';
     //Add Event
-    window.addEventListener('keypress', SecondLevel);
+    if (!isEventListenerAdded) {
+      window.addEventListener('keypress', SecondLevel);
+      isEventListenerAdded = true;
+    }
 
     //---Noises---//
     //Lower Background sounds
@@ -286,7 +271,10 @@ document.addEventListener('wheel', (event) => {
     station2_AI_Voice.play();
     station2_AI_Voice.volume = 0.7;
   } else if (level == 1) {
-    window.addEventListener('keypress', ReturnToStart);
+    if (isEventListenerAdded) {
+      window.removeEventListener('keypress', SecondLevel);
+      isEventListenerAdded = false;
+    }
     hiddenboxLevel2.style.display = 'none';
     //Reset AI Voice
     station2_AI_Voice.pause();
@@ -303,7 +291,11 @@ document.addEventListener('wheel', (event) => {
     level == 2
   ) {
     hiddenboxLevel3.style.display = 'block';
-    window.addEventListener('keypress', ThirdLevel);
+    // Add Event only one time
+    if (!isEventListenerAdded) {
+      window.addEventListener('keypress', ThirdLevel);
+      isEventListenerAdded = true;
+    }
 
     //---Noises---//
     //Lower Background sounds
@@ -314,7 +306,11 @@ document.addEventListener('wheel', (event) => {
     station3_AI_Voice.play();
     station3_AI_Voice.volume = 0.7;
   } else if (level == 2) {
-    window.addEventListener('keypress', ReturnToStart);
+    //Remove EventListener
+    if (isEventListenerAdded) {
+      window.removeEventListener('keypress', ThirdLevel);
+      isEventListenerAdded = false;
+    }
     hiddenboxLevel3.style.display = 'none';
 
     //Reset AI Voice
@@ -332,7 +328,11 @@ document.addEventListener('wheel', (event) => {
     level == 3
   ) {
     hiddenboxLevel4.style.display = 'block';
-    window.addEventListener('keypress', FourthLevel);
+    // Add Event only one time
+    if (!isEventListenerAdded) {
+      window.addEventListener('keypress', FourthLevel);
+      isEventListenerAdded = true;
+    }
 
     //---Noises---//
     //Lower Background sounds
@@ -343,7 +343,11 @@ document.addEventListener('wheel', (event) => {
     station4_AI_Voice.play();
     station4_AI_Voice.volume = 0.7;
   } else if (level == 3) {
-    window.addEventListener('keypress', ReturnToStart);
+    //Remove EventListener
+    if (isEventListenerAdded) {
+      window.removeEventListener('keypress', FourthLevel);
+      isEventListenerAdded = false;
+    }
     hiddenboxLevel4.style.display = 'none';
 
     //Reset AI Voice
@@ -362,3 +366,25 @@ document.addEventListener('wheel', (event) => {
     vehicle.s;
   });
 });
+
+//Funktionen für den Level wechsel
+function FirstLevel(e) {
+  if (e.key === 'Enter') {
+    window.location = '/MemoryMerged/index.html';
+  }
+}
+function SecondLevel(e) {
+  if (e.key == 'Enter') {
+    window.location = '/CrosswordMerged/index.html';
+  }
+}
+function ThirdLevel(e) {
+  if (e.key == 'Enter') {
+    window.location = '/QuizGame_WTTJ/index.html';
+  }
+}
+function FourthLevel(e) {
+  if (e.key == 'Enter') {
+    window.location = '/Jump_And_RunMerged/index.html';
+  }
+}

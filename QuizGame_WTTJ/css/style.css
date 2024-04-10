@@ -37,14 +37,15 @@ body {
   border-radius: 22px;
 }
 
-@media (max-width: 1920px) {
+@media (min-width: 1920px) {
   /* Makes the container look good on small screens */
   #questionText {
-    font-size: 15px !important;
+    font-size: 16px !important;
   }
   .answer-btn {
     margin: 25px 4 !important;
-    height: 6vh !important;
+    height: 5vh !important;
+    width: 21vw !important;
     font-size: 15px !important;
   }
   #next_btn {
@@ -52,22 +53,21 @@ body {
   }
 }
 
-@media (max-width: 2560px) {
+@media (min-width: 2560px) {
   /* Makes the container look good on small screens */
   #questionText {
     font-size: 20px !important;
   }
   .answer-btn {
     margin: 25px 4 !important;
-    height: 8vh !important;
+    height: 6vh !important;
+    width: 20vw !important;
     font-size: 20px !important;
   }
   #next_btn {
     font-size: 24px !important;
   }
 }
-
-
 
 .wrap-container > h1 {
   color: rgb(44, 4, 4);
@@ -139,7 +139,6 @@ body {
   font-weight: normal;
   color: black;
 }
-
 
 .answer-btn:hover {
   color: white;
