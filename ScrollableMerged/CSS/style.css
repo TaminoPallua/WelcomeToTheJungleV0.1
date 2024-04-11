@@ -43,12 +43,12 @@ body {
 #Station_2 {
   width: 280px;
   height: 320px;
-  border: 6px dashed rgb(244, 255, 37);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  /* border: 6px dashed rgb(244, 255, 37); */
+  /* background-size: 100% 100%;
+  background-repeat: no-repeat; */
   position: absolute;
   top: 58vh;
-  left: 30%;
+  left: 20%;
   z-index: 1;
 }
 #Station_3 {
@@ -80,7 +80,7 @@ body {
 
 /* EBENEN DESIGNS */
 #Top-Level {
-  background-image: url(/ScrollableMerged/images/EbeneLevel01\(includingTerminal\).png);
+  background-image: url(/ScrollableMerged/images/layers/EbeneLevel01\(includingTerminal\).png);
   background-size: 100% 105%;
   background-repeat: no-repeat;
   object-fit: cover;
@@ -88,7 +88,8 @@ body {
   height: 50vh;
 }
 #Mid-Level {
-  background-image: url(/ScrollableMerged/images/EbeneLevel01.png);
+  background-image: url(/ScrollableMerged/images/layers/Ebene02_upscaled.png);
+  background-color: rgb(91, 115, 83);
   background-size: 100% 105%;
   background-repeat: no-repeat;
   object-fit: cover;
@@ -97,7 +98,8 @@ body {
 }
 
 #Mid2-Level {
-  background-image: url(/ScrollableMerged/images/EbeneLevel01.png);
+  /* background-image: url(/ScrollableMerged/images/EbeneLevel01.png); */
+  background-color: rgb(91, 115, 83);
   background-size: 100% 105%;
   background-repeat: no-repeat;
   object-fit: cover;
@@ -105,7 +107,8 @@ body {
   height: 50vh;
 }
 #Bottom-Level {
-  background-image: url(/ScrollableMerged/images/EbeneLevel01.png);
+  /* background-image: url(/ScrollableMerged/images/EbeneLevel01.png); */
+  background-color: rgb(91, 115, 83);
   background-size: 100% 105%;
   background-repeat: no-repeat;
   object-fit: cover;
@@ -156,7 +159,7 @@ body {
 }
 
 #arrowStation2 {
-  left: 35.5% !important;
+  left: 30% !important;
   top: 53vh;
 }
 
@@ -203,7 +206,7 @@ body {
   text-align: center;
   position: absolute;
   top: 58vh;
-  left: 5%;
+  right: 10%;
   transition: all 3s ease-in-out;
   display: none;
 }

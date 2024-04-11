@@ -28,11 +28,14 @@ const levelHeight = 100 / ebenen; // Höhe jeder Ebene in vh (Viewport Height), 
 
 //-------------------- MISSION TERMINAL VARIABLES ----------------------------//
 
-const body = document.body;
 let isEventListenerAdded = false;
 
 //  //-------------------- AUDIO VARIABLES ----------------------------//
-var engineAudio = new Audio('/ScrollableMerged/audio/BackgroundNoises/EngineSound.mp3');
+
+// Set Engine sound to the default (change happens when the vehicle is switched)
+var engineAudio = new Audio('/ScrollableMerged/audio/EngineSounds/Bagger_EngineSound.mp3');
+
+//Backgorund music
 var level0Audio = new Audio('/ScrollableMerged/audio/BackgroundNoises/Level0Background.mp3');
 var level1Audio = new Audio('/ScrollableMerged/audio/BackgroundNoises/Level1Background.mp3');
 var level2Audio = new Audio('/ScrollableMerged/audio/BackgroundNoises/Level2Background.mp3');
@@ -86,6 +89,7 @@ document.addEventListener('wheel', (event) => {
     // Verhindern das man außerhalb des linken randes ist
     positionX = screenWidth;
     level -= 1;
+
     levelGlobal = level;
     // console.log(`LevelGlobal: ${levelGlobal}`);
     vehicle.style.top = `${2 * level * levelHeight}vh`;
@@ -93,10 +97,37 @@ document.addEventListener('wheel', (event) => {
   } else if (positionX > screenWidth + 200 && level !== 3) {
     positionX = 0;
     level += 1;
+
     levelGlobal = level;
     // console.log(`LevelGlobal: ${levelGlobal}`);
     vehicle.style.top = `${2 * level * levelHeight}vh`;
     window.scrollBy(0, window.innerHeight / 2);
+  }
+
+  //Change vehicles depending on the layer
+  if (level == 0) {
+    //Change vehicle
+    vehicle.src = '/ScrollableMerged/images/vehicles/Vehicle_jeep.png';
+    //Change engineSound
+    engineAudio = new Audio('/ScrollableMerged/audio/EngineSounds/Bagger_EngineSound.mp3');
+  }
+  if (level == 1) {
+    //Change vehicle
+    vehicle.src = '/ScrollableMerged/images/vehicles/Vehicle_bagger.png';
+    //Change engineSound
+    // engineAudio = new Audio('/ScrollableMerged/audio/EngineSounds/XXX_EngineSound.mp3');
+  }
+  if (level == 2) {
+    //Change vehicle
+    // vehicle.src = '/ScrollableMerged/images/vehicles/Vehicle_XXX.png';
+    // //Change engineSound
+    // engineAudio = new Audio('/ScrollableMerged/audio/EngineSounds/XXX_EngineSound.mp3');
+  }
+  if (level == 3) {
+    //Change vehicle
+    // vehicle.src = '/ScrollableMerged/images/vehicles/Vehicle_XXX.png';
+    // //Change engineSound
+    // engineAudio = new Audio('/ScrollableMerged/audio/EngineSounds/XXX_EngineSound.mp3');
   }
 
   //-------------------- VEHICLE SOUNDS ----------------------------//
