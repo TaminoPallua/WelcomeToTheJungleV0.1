@@ -1,7 +1,7 @@
 body {
   background-color: #333333;
   margin: 0;
-  padding: 2px;
+  padding: 0;
 }
 
 @media (max-width: 2560px) {
@@ -84,16 +84,17 @@ body {
   background-size: 100% 105%;
   background-repeat: no-repeat;
   object-fit: cover;
-  border: 1px solid rgb(16, 255, 8);
+  /* border: 1px solid rgb(16, 255, 8); */
+  border: 3px solid #333333;
   height: 50vh;
 }
 #Mid-Level {
   background-image: url(/ScrollableMerged/images/layers/Ebene02_upscaled.png);
-  background-color: rgb(91, 115, 83);
   background-size: 100% 105%;
   background-repeat: no-repeat;
   object-fit: cover;
-  border: 1px solid rgb(16, 255, 8);
+  /* border: 1px solid rgb(16, 255, 8); */
+  border: 3px solid #333333;
   height: 50vh;
 }
 

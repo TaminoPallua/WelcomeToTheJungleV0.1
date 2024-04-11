@@ -89,19 +89,38 @@ document.addEventListener('wheel', (event) => {
     // Verhindern das man außerhalb des linken randes ist
     positionX = screenWidth;
     level -= 1;
-
     levelGlobal = level;
-    // console.log(`LevelGlobal: ${levelGlobal}`);
-    vehicle.style.top = `${2 * level * levelHeight}vh`;
-    window.scrollBy(0, -window.innerHeight / 2);
+
+    //Verschieben des Fahrzeuges auf der Y Achse
+    if (level == 1) {
+      // Ausnahme bei level 1 aufgrund von unterschiedlichen Bodenhöhen
+      vehicle.style.top = `${2 * level * levelHeight + 4}vh`;
+      console.log('Fahrzeug erreich ebene 1');
+    } else {
+      vehicle.style.top = `${2 * level * levelHeight}vh`;
+    }
+
+    // Raufscollen wenn man die 2 Ebene betreten möchte
+    if (level == 1) {
+      window.scrollBy(0, -window.innerHeight);
+    }
   } else if (positionX > screenWidth + 200 && level !== 3) {
     positionX = 0;
     level += 1;
 
     levelGlobal = level;
-    // console.log(`LevelGlobal: ${levelGlobal}`);
-    vehicle.style.top = `${2 * level * levelHeight}vh`;
-    window.scrollBy(0, window.innerHeight / 2);
+
+    if (level == 1) {
+      // Ausnahme bei level 1 aufgrund von unterschiedlichen Bodenhöhen
+      vehicle.style.top = `${2 * level * levelHeight + 4}vh`;
+      console.log('Fahrzeug erreich ebene 1');
+    } else {
+      vehicle.style.top = `${2 * level * levelHeight}vh`;
+    }
+    // Runterscollen wenn man die 3 Ebene betreten möchte
+    if (level == 2) {
+      window.scrollBy(0, window.innerHeight);
+    }
   }
 
   //Change vehicles depending on the layer
