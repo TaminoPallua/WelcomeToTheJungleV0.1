@@ -54,13 +54,13 @@ body {
 #Station_3 {
   width: 280px;
   height: 320px;
-  border: 6px dashed rgb(0, 250, 13);
+  /* border: 6px dashed rgb(0, 250, 13); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: absolute;
   pointer-events: auto;
-  top: 108vh;
-  left: 50%;
+  top: 118vh;
+  left: 71%;
   z-index: 1;
 }
 
@@ -99,12 +99,12 @@ body {
 }
 
 #Mid2-Level {
-  /* background-image: url(/ScrollableMerged/images/EbeneLevel01.png); */
+  background-image: url(/ScrollableMerged/images/layers/Ebene03_exp.png);
   background-color: rgb(91, 115, 83);
   background-size: 100% 105%;
   background-repeat: no-repeat;
   object-fit: cover;
-  border: 1px solid rgb(16, 255, 8);
+  border: 3px solid #333333;
   height: 50vh;
 }
 #Bottom-Level {
@@ -165,8 +165,8 @@ body {
 }
 
 #arrowStation3 {
-  left: 55.5% !important;
-  top: 102vh;
+  left: 76% !important;
+  top: 115vh;
 }
 
 #arrowStation4 {
@@ -224,7 +224,7 @@ body {
   height: 200px;
   text-align: center;
   position: absolute;
-  top: 108vh;
+  top: 115vh;
   left: 5%;
   transition: all 3s ease-in-out;
   display: none;

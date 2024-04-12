@@ -113,13 +113,15 @@ document.addEventListener('wheel', (event) => {
     if (level == 1) {
       // Ausnahme bei level 1 aufgrund von unterschiedlichen Bodenhöhen
       vehicle.style.top = `${2 * level * levelHeight + 4}vh`;
-      console.log('Fahrzeug erreich ebene 1');
+    } else if (level == 2) {
+      // Ausnahme bei level 2 aufgrund von unterschiedlichen Bodenhöhen
+      vehicle.style.top = `${2 * level * levelHeight + 15}vh`;
     } else {
       vehicle.style.top = `${2 * level * levelHeight}vh`;
     }
     // Runterscollen wenn man die 3 Ebene betreten möchte
     if (level == 2) {
-      window.scrollBy(0, window.innerHeight);
+      window.scrollBy(0, window.innerHeight + 50);
     }
   }
 
@@ -138,7 +140,7 @@ document.addEventListener('wheel', (event) => {
   }
   if (level == 2) {
     //Change vehicle
-    // vehicle.src = '/ScrollableMerged/images/vehicles/Vehicle_XXX.png';
+    vehicle.src = '/ScrollableMerged/images/vehicles/Vehicle_truck.png';
     // //Change engineSound
     // engineAudio = new Audio('/ScrollableMerged/audio/EngineSounds/XXX_EngineSound.mp3');
   }
@@ -409,12 +411,12 @@ document.addEventListener('wheel', (event) => {
     engineAudio.volume = 0.03;
   }
 
-  window.addEventListener('load', () => {
-    if (sessionStorage.getItem('vehicleX')) {
-      xCoordinateVehicle = sessionStorage.getItem('vehicleX');
-    }
-    vehicle.s;
-  });
+  // window.addEventListener('load', () => {
+  //   if (sessionStorage.getItem('vehicleX')) {
+  //     xCoordinateVehicle = sessionStorage.getItem('vehicleX');
+  //   }
+  //   vehicle.s;
+  // });
 });
 
 //Funktionen für den Level wechsel
@@ -438,3 +440,11 @@ function FourthLevel(e) {
     window.location = '/Jump_And_RunMerged/index.html';
   }
 }
+
+//Scroll to bottom when fullscreen is active
+
+document.addEventListener('fullscreeneventchange', (e) => {
+  if (level == 2) {
+    alert('Triggerd');
+  }
+});
