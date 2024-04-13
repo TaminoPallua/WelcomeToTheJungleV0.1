@@ -112,10 +112,10 @@ document.addEventListener('wheel', (event) => {
 
     if (level == 1) {
       // Ausnahme bei level 1 aufgrund von unterschiedlichen Bodenhöhen
-      vehicle.style.top = `${2 * level * levelHeight + 4}vh`;
+      vehicle.style.top = `${2 * level * levelHeight + 6.5}vh`;
     } else if (level == 2) {
       // Ausnahme bei level 2 aufgrund von unterschiedlichen Bodenhöhen
-      vehicle.style.top = `${2 * level * levelHeight + 10}vh`;
+      vehicle.style.top = `${2 * level * levelHeight + 18}vh`;
     } else {
       vehicle.style.top = `${2 * level * levelHeight}vh`;
     }
