@@ -12,7 +12,8 @@ body {
 
 @media (max-width: 1920px) {
   #vehicle {
-    margin-top: 9.5vh !important;
+    width: 340px !important;
+    margin-top: 10vh !important;
   }
 }
 
