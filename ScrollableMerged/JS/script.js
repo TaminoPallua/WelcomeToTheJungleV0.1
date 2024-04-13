@@ -33,7 +33,7 @@ let isEventListenerAdded = false;
 //  //-------------------- AUDIO VARIABLES ----------------------------//
 
 // Set Engine sound to the default (change happens when the vehicle is switched)
-var engineAudio = new Audio('/ScrollableMerged/audio/EngineSounds/Bagger_EngineSound.mp3');
+var engineAudio = new Audio('/ScrollableMerged/audio/EngineSounds/EngineSound_jeep.mp3');
 
 //Backgorund music
 var level0Audio = new Audio('/ScrollableMerged/audio/BackgroundNoises/Level0Background.mp3');
@@ -94,8 +94,11 @@ document.addEventListener('wheel', (event) => {
     //Verschieben des Fahrzeuges auf der Y Achse
     if (level == 1) {
       // Ausnahme bei level 1 aufgrund von unterschiedlichen Bodenhöhen
-      vehicle.style.top = `${2 * level * levelHeight + 4}vh`;
+      vehicle.style.top = `${2 * level * levelHeight + 6.5}vh`;
       console.log('Fahrzeug erreich ebene 1');
+    } else if (level == 2) {
+      // Ausnahme bei level 2 aufgrund von unterschiedlichen Bodenhöhen
+      vehicle.style.top = `${2 * level * levelHeight + 18}vh`;
     } else {
       vehicle.style.top = `${2 * level * levelHeight}vh`;
     }
@@ -119,6 +122,7 @@ document.addEventListener('wheel', (event) => {
     } else {
       vehicle.style.top = `${2 * level * levelHeight}vh`;
     }
+
     // Runterscollen wenn man die 3 Ebene betreten möchte
     if (level == 2) {
       window.scrollBy(0, window.innerHeight + 50);
@@ -130,7 +134,7 @@ document.addEventListener('wheel', (event) => {
     //Change vehicle
     vehicle.src = '/ScrollableMerged/images/vehicles/Vehicle_jeep.png';
     //Change engineSound
-    engineAudio = new Audio('/ScrollableMerged/audio/EngineSounds/Bagger_EngineSound.mp3');
+    // engineAudio.src = '/ScrollableMerged/audio/EngineSounds/EngineSound_jeep.mp3';
   }
   if (level == 1) {
     //Change vehicle
@@ -157,7 +161,7 @@ document.addEventListener('wheel', (event) => {
 
   if (isMoving && engineAudio.paused) {
     engineAudio.play();
-    engineAudio.volume = 0.03;
+    engineAudio.volume = 0.3;
     isEngineSoundPlaying = true;
   }
 
@@ -410,7 +414,7 @@ document.addEventListener('wheel', (event) => {
 
     //Set volume of Background noises to default
     level3Audio.volume = 0.2;
-    engineAudio.volume = 0.03;
+    engineAudio.volume = 0.3;
   }
 
   // window.addEventListener('load', () => {
