@@ -82,7 +82,7 @@ body {
 #Station_4 {
   width: 280px;
   height: 320px;
-  border: 6px dashed rgb(0, 85, 255);
+  /* border: 6px dashed rgb(0, 85, 255); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: absolute;
@@ -186,6 +186,7 @@ body {
 
 #arrowStation4 {
   left: 15.5% !important;
+  visibility: hidden;
   top: 153vh;
 }
 

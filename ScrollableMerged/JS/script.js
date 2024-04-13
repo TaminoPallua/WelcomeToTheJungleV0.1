@@ -23,7 +23,8 @@ if (levelGlobal == undefined) {
   // Wenn noch kein Event zum erhöhen des Levels getriggerd wurde befindet sich der Bagger auf Level 0 der Starterebene
   levelGlobal = 0;
 }
-let ebenen = 4; // Gesamtanzahl Ebenen
+const ebenen = 4; // Gesamtanzahl Ebenen
+const numberOfWindowHeigths = 2; // Anzahl der Fensterhöhen
 const levelHeight = 100 / ebenen; // Höhe jeder Ebene in vh (Viewport Height), für 4 Ebenen
 
 //-------------------- MISSION TERMINAL VARIABLES ----------------------------//
@@ -82,7 +83,7 @@ document.addEventListener('wheel', (event) => {
   // Begrenzen Sie die Position auf den Bildschirmrand für die linke Seite auf dem ersten Level
   if (positionX < 0 && level == 0) {
     positionX = 0;
-  } else if (positionX >= window.outerWidth - 280 && level == 3) {
+  } else if (positionX >= window.outerWidth - 280 && level == ebenen - 1) {
     // Stopp/Ende für das letzte Level
     positionX = window.outerWidth - 280; // 280 => Fahrzeugbreite
   } else if (positionX < 0 && level !== 0) {
@@ -94,20 +95,19 @@ document.addEventListener('wheel', (event) => {
     //Verschieben des Fahrzeuges auf der Y Achse
     if (level == 1) {
       // Ausnahme bei level 1 aufgrund von unterschiedlichen Bodenhöhen
-      vehicle.style.top = `${2 * level * levelHeight + 6.5}vh`;
-      console.log('Fahrzeug erreich ebene 1');
+      vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 6.5}vh`;
     } else if (level == 2) {
       // Ausnahme bei level 2 aufgrund von unterschiedlichen Bodenhöhen
-      vehicle.style.top = `${2 * level * levelHeight + 18}vh`;
+      vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 18}vh`;
     } else {
-      vehicle.style.top = `${2 * level * levelHeight}vh`;
+      vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight}vh`;
     }
 
     // Raufscollen wenn man die 2 Ebene betreten möchte
     if (level == 1) {
       window.scrollBy(0, -window.innerHeight);
     }
-  } else if (positionX > screenWidth + 200 && level !== 3) {
+  } else if (positionX > screenWidth + 200 && level !== ebenen - 1) {
     positionX = 0;
     level += 1;
 
@@ -115,12 +115,12 @@ document.addEventListener('wheel', (event) => {
 
     if (level == 1) {
       // Ausnahme bei level 1 aufgrund von unterschiedlichen Bodenhöhen
-      vehicle.style.top = `${2 * level * levelHeight + 6.5}vh`;
+      vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 6.5}vh`;
     } else if (level == 2) {
       // Ausnahme bei level 2 aufgrund von unterschiedlichen Bodenhöhen
-      vehicle.style.top = `${2 * level * levelHeight + 18}vh`;
+      vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 18}vh`;
     } else {
-      vehicle.style.top = `${2 * level * levelHeight}vh`;
+      vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight}vh`;
     }
 
     // Runterscollen wenn man die 3 Ebene betreten möchte
