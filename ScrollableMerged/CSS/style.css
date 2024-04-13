@@ -16,11 +16,25 @@ body {
   }
 }
 
+/* Header for layer */
+#header_level01 {
+  text-align: center;
+  font-family: 'JurassicPark', sans-serif;
+  font-size: 70px;
+  font-weight: bold;
+  text-decoration: underline;
+  /* color: rgb(44, 4, 4); */
+  color: white;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
 #vehicle {
-  width: 280px;
+  width: 300px;
   height: auto;
   position: absolute;
-  margin-top: 19vh;
+  margin-top: 15vh;
   z-index: 1;
   /* border: 5px solid black; */
 }
@@ -52,15 +66,15 @@ body {
   z-index: 1;
 }
 #Station_3 {
-  width: 280px;
-  height: 320px;
+  width: 450px;
+  height: 450px;
   /* border: 6px dashed rgb(0, 250, 13); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: absolute;
   pointer-events: auto;
-  top: 118vh;
-  left: 71%;
+  top: 115vh;
+  left: 67%;
   z-index: 1;
 }
 
@@ -80,7 +94,7 @@ body {
 
 /* EBENEN DESIGNS */
 #Top-Level {
-  background-image: url(/ScrollableMerged/images/layers/EbeneLevel01\(includingTerminal\).png);
+  background-image: url(/ScrollableMerged/images/layers/Ebene01.png);
   background-size: 100% 105%;
   background-repeat: no-repeat;
   object-fit: cover;
@@ -99,7 +113,7 @@ body {
 }
 
 #Mid2-Level {
-  background-image: url(/ScrollableMerged/images/layers/Ebene03_exp.png);
+  background-image: url(/ScrollableMerged/images/layers/Ebene03_.png);
   background-color: rgb(91, 115, 83);
   background-size: 100% 105%;
   background-repeat: no-repeat;
@@ -155,13 +169,13 @@ body {
 /* Arrow style / Position */
 
 #arrowStation1 {
-  left: 75% !important;
+  left: 76% !important;
   top: 2vh;
 }
 
 #arrowStation2 {
-  left: 30% !important;
-  top: 53vh;
+  left: 31% !important;
+  top: 58vh;
 }
 
 #arrowStation3 {
@@ -246,4 +260,9 @@ body {
   right: 10%;
   transition: all 3s ease-in-out;
   display: none;
+}
+
+@font-face {
+  font-family: 'JurassicPark';
+  src: url(/ScrollableMerged/fonts/Jurassic_Park.ttf);
 }

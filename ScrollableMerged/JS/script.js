@@ -115,7 +115,7 @@ document.addEventListener('wheel', (event) => {
       vehicle.style.top = `${2 * level * levelHeight + 4}vh`;
     } else if (level == 2) {
       // Ausnahme bei level 2 aufgrund von unterschiedlichen Bodenhöhen
-      vehicle.style.top = `${2 * level * levelHeight + 15}vh`;
+      vehicle.style.top = `${2 * level * levelHeight + 10}vh`;
     } else {
       vehicle.style.top = `${2 * level * levelHeight}vh`;
     }
@@ -141,6 +141,8 @@ document.addEventListener('wheel', (event) => {
   if (level == 2) {
     //Change vehicle
     vehicle.src = '/ScrollableMerged/images/vehicles/Vehicle_truck.png';
+    //Chnage size
+    vehicle.style.width = '450px';
     // //Change engineSound
     // engineAudio = new Audio('/ScrollableMerged/audio/EngineSounds/XXX_EngineSound.mp3');
   }
@@ -441,10 +443,13 @@ function FourthLevel(e) {
   }
 }
 
-//Scroll to bottom when fullscreen is active
+//Scroll to bottom when fullscreen is active to prevent the layers to merge
 
-document.addEventListener('fullscreeneventchange', (e) => {
-  if (level == 2) {
-    alert('Triggerd');
+window.addEventListener('resize', function () {
+  if (level > 1) {
+    if (window.innerWidth === screen.width) {
+      // Der Benutzer ist im Vollbildmodus
+      window.scrollTo(0, document.body.scrollHeight);
+    }
   }
 });
