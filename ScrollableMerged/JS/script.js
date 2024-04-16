@@ -14,11 +14,12 @@ const vehicle = document.getElementById('vehicle'); // Fahrzeug holen
 let positionX = 50; // Startposition
 let isMoving = false;
 let firstTurned = false; // Schauen ob das Fahrzeug gedreht ist
-const screenWidth = window.innerWidth; // Bildschirmbreite hole
+const screenWidth = window.innerWidth; // Bildschirmbreite holen
 let endNotReached = true; // Schauen ob der Bagger das Ende erreicht hat
 let turned = false;
 let level = 0; // Aktuelle Ebene
 let levelGlobal;
+let vehicleWidth = vehicle.width;
 if (levelGlobal == undefined) {
   // Wenn noch kein Event zum erhöhen des Levels getriggerd wurde befindet sich der Bagger auf Level 0 der Starterebene
   levelGlobal = 0;
@@ -81,12 +82,12 @@ document.addEventListener('wheel', (event) => {
   }
 
   // Begrenzen Sie die Position auf den Bildschirmrand für die linke Seite auf dem ersten Level
-  if (positionX < 0 && level == 0) {
+  if (positionX < 0 && level === 0) {
     positionX = 0;
-  } else if (positionX >= window.outerWidth - 280 && level == ebenen - 1) {
+  } else if (positionX >= window.outerWidth - vehicleWidth && level == ebenen - 1) {
     // Stopp/Ende für das letzte Level
-    positionX = window.outerWidth - 280; // 280 => Fahrzeugbreite
-  } else if (positionX < 0 && level !== 0) {
+    positionX = window.outerWidth - vehicleWidth; // vehicleWidth => Fahrzeugbreite
+  } else if (positionX + vehicleWidth + 20 < 0 && level !== 0) {
     // Verhindern das man außerhalb des linken randes ist
     positionX = screenWidth;
     level -= 1;
@@ -272,7 +273,7 @@ document.addEventListener('wheel', (event) => {
   //Station 1
   if (
     xCoordinateVehicle + 150 >= xCoordinateStation1 &&
-    xCoordinateVehicle <= xCoordinateStation1 + 280 &&
+    xCoordinateVehicle <= xCoordinateStation1 + vehicleWidth &&
     level == 0
   ) {
     //Add EventListener only one time
@@ -309,7 +310,7 @@ document.addEventListener('wheel', (event) => {
 
   if (
     xCoordinateVehicle + 150 >= xCoordinateStation2 &&
-    xCoordinateVehicle <= xCoordinateStation2 + 280 &&
+    xCoordinateVehicle <= xCoordinateStation2 + vehicleWidth &&
     level == 1
   ) {
     //Unhide info box
@@ -345,7 +346,7 @@ document.addEventListener('wheel', (event) => {
   //Station 3
   if (
     xCoordinateVehicle + 150 >= xCoordinateStation3 &&
-    xCoordinateVehicle <= xCoordinateStation3 + 280 &&
+    xCoordinateVehicle <= xCoordinateStation3 + vehicleWidth &&
     level == 2
   ) {
     hiddenboxLevel3.style.display = 'block';
@@ -382,7 +383,7 @@ document.addEventListener('wheel', (event) => {
   //Station 4
   if (
     xCoordinateVehicle + 50 >= xCoordinateStation4 &&
-    xCoordinateVehicle <= xCoordinateStation4 + 280 &&
+    xCoordinateVehicle <= xCoordinateStation4 + vehicleWidth &&
     level == 3
   ) {
     hiddenboxLevel4.style.display = 'block';
