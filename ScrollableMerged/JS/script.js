@@ -30,7 +30,38 @@ const levelHeight = 100 / ebenen; // Höhe jeder Ebene in vh (Viewport Height), 
 
 //-------------------- MISSION TERMINAL VARIABLES ----------------------------//
 
+//Event Listener check variable
 let isEventListenerAdded = false;
+
+//Station 1 -- Erstes Minigame
+let station1 = document.getElementById('Station_1');
+var station1rect = station1.getBoundingClientRect();
+let xCoordinateStation1 = station1rect.left;
+// console.log(`X: ${xCoordinateVehicle}`);
+
+// HiddenBox 1
+let hiddenboxLevel1 = document.getElementById('hiddenBoxLevel1');
+
+//Station 2 -- Zweites Minigame
+let station2 = document.getElementById('Station_2');
+var station2rect = station2.getBoundingClientRect();
+let xCoordinateStation2 = station2rect.left;
+// HiddenBox 2
+let hiddenboxLevel2 = document.getElementById('hiddenBoxLevel2');
+
+//Station 3 -- Drittes Minigame
+let station3 = document.getElementById('Station_3');
+var station3rect = station3.getBoundingClientRect();
+let xCoordinateStation3 = station3rect.left;
+// HiddenBox 3
+let hiddenboxLevel3 = document.getElementById('hiddenBoxLevel3');
+
+//Station 4 -- Viertes Minigame
+let station4 = document.getElementById('Station_4');
+var station4rect = station4.getBoundingClientRect();
+let xCoordinateStation4 = station4rect.left;
+// HiddenBox 4
+let hiddenboxLevel4 = document.getElementById('hiddenBoxLevel4');
 
 //  //-------------------- AUDIO VARIABLES ----------------------------//
 
@@ -234,36 +265,6 @@ document.addEventListener('wheel', (event) => {
   let xCoordinateVehicle = vehicleRect.left;
   //Position des Fahrzeges im Session Storage ablegen
   sessionStorage.setItem('vehicleX', xCoordinateVehicle);
-
-  //Station 1 -- Erstes Minigame
-  let station1 = document.getElementById('Station_1');
-  var station1rect = station1.getBoundingClientRect();
-  let xCoordinateStation1 = station1rect.left;
-  // console.log(`X: ${xCoordinateVehicle}`);
-
-  // HiddenBox 1
-  let hiddenboxLevel1 = document.getElementById('hiddenBoxLevel1');
-
-  //Station 2 -- Zweites Minigame
-  let station2 = document.getElementById('Station_2');
-  var station2rect = station2.getBoundingClientRect();
-  let xCoordinateStation2 = station2rect.left;
-  // HiddenBox 2
-  let hiddenboxLevel2 = document.getElementById('hiddenBoxLevel2');
-
-  //Station 3 -- Drittes Minigame
-  let station3 = document.getElementById('Station_3');
-  var station3rect = station3.getBoundingClientRect();
-  let xCoordinateStation3 = station3rect.left;
-  // HiddenBox 3
-  let hiddenboxLevel3 = document.getElementById('hiddenBoxLevel3');
-
-  //Station 4 -- Viertes Minigame
-  let station4 = document.getElementById('Station_4');
-  var station4rect = station4.getBoundingClientRect();
-  let xCoordinateStation4 = station4rect.left;
-  // HiddenBox 4
-  let hiddenboxLevel4 = document.getElementById('hiddenBoxLevel4');
 
   //Scroll to top of the page before it reloads
   window.onbeforeunload = () => {
