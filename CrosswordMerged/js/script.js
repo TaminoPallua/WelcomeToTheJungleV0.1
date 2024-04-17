@@ -10,6 +10,8 @@ let letters1 = ['A', 'B', 'B', 'A', 'U'];
 let letters2 = ['B', 'R', 'A', 'N', 'D'];
 let letters3 = ['A', 'X', 'T'];
 let letters4 = ['T', 'R', 'O', 'P', 'E', 'N'];
+let letters5 = ['J', 'A', 'G', 'U', 'A', 'R'];
+let letters6 = ['L', 'I', 'A', 'N', 'E', 'N'];
 
 
 let backgroundAudio = new Audio('/CrosswordMerged/audio/Level1Background.mp3');

@@ -419,6 +419,7 @@ function shuffleQuestions() {
   questionsEasy.sort(() => Math.random() - 0.5);
   questionsMedium.sort(() => Math.random() - 0.5);
   questionsHard.sort(() => Math.random() - 0.5);
+  
 
   //Randomize Answer presets
   for (let i = 0; i < questionsEasy.length; i++) {
