@@ -136,32 +136,23 @@ table {
   border: 3px solid rgba(255, 255, 255, 50);
 }
 
-.td1class:hover {
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-}
-.td2class:hover {
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-}
-
-#a2 {
+#f3 {
   background-image: url('../images/imgNr1.png');
   background-size: cover;
 }
-#e2 {
+#j3 {
   background-image: url('../images/imgNr2.png');
   background-size: cover;
 }
-#e4 {
+#j4 {
   background-image: url('../images/imgNr3.png');
   background-size: cover;
 }
-#e5 {
+#l7 {
   background-image: url('../images/imgNr4.png');
   background-size: cover;
 }
-#c7 {
+#b6 {
   background-image: url('../images/imgNr5.png');
   background-size: cover;
 }

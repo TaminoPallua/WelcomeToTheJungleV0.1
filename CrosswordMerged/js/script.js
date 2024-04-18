@@ -3,8 +3,11 @@ document.getElementById("hiddenBoxQ2").style.display = "none";
 document.getElementById("hiddenBoxQ3").style.display = "none";
 document.getElementById("hiddenBoxQ4").style.display = "none";
 document.getElementById("hiddenBoxQ5").style.display = "none";
+document.getElementById("hiddenBoxQ6").style.display = "none";
+document.getElementById("hiddenBoxQ7").style.display = "none";
+document.getElementById("hiddenBoxQ8").style.display = "none";
 
-let words = ['flora', 'abbau', 'brand', 'axt', 'tropen'];
+let words = ['flora', 'abbau', 'brand', 'axt', 'tropen', 'jaguar', 'lianen', 'amazonas'];
 let letters0 = ['F', 'L', 'O', 'R', 'A'];
 let letters1 = ['A', 'B', 'B', 'A', 'U'];
 let letters2 = ['B', 'R', 'A', 'N', 'D'];
@@ -12,6 +15,8 @@ let letters3 = ['A', 'X', 'T'];
 let letters4 = ['T', 'R', 'O', 'P', 'E', 'N'];
 let letters5 = ['J', 'A', 'G', 'U', 'A', 'R'];
 let letters6 = ['L', 'I', 'A', 'N', 'E', 'N'];
+let letters7 = ['A', 'M', 'A', 'Z', 'O', 'N', 'A', 'S'];
+
 
 
 let backgroundAudio = new Audio('/CrosswordMerged/audio/Level1Background.mp3');
@@ -63,7 +68,14 @@ function sumbit1() {
     document.getElementById('f7').innerHTML = letters4[3]
     document.getElementById('g7').innerHTML = letters4[4]
     document.getElementById('h7').innerHTML = letters4[5]
+  } else if (userInput == words[5]) {
+    document.getElementById('Q2').style.textDecoration = 'line-through';
 
+    document.getElementById('e2').innerHTML = letters1[0];
+    document.getElementById('e3').innerHTML = letters1[1];
+    document.getElementById('e4').innerHTML = letters1[2];
+    document.getElementById('e5').innerHTML = letters1[3];
+    document.getElementById('e6').innerHTML = letters1[4];
   }
 
   // Change style according to input
