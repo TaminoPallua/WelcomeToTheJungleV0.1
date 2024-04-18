@@ -233,5 +233,5 @@ hr {
 /* Font */
 @font-face {
   font-family: 'JurassicPark';
-  src: url('/QuizGame_WTTJ/fonts/Jurassic_Park.ttf') format('truetype');
+  src: url('../fonts/Jurassic_Park.ttf') format('truetype');
 }
