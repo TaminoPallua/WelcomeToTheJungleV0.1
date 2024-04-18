@@ -109,8 +109,8 @@ table {
 /* Einzelne Felder bzw auch die Questionboxen werden hier gestyled */
 
 .td1class {
-  width: 7vh;
-  height: 7vh;
+  width: 5vh;
+  height: 5vh;
 
   text-align: center;
   border-collapse: collapse;
@@ -123,17 +123,17 @@ table {
   border: 3px solid rgba(255, 255, 255, 0.18);
 }
 .td2class {
-  width: 5vh;
-  height: 5vh;
+  width: 4vh;
+  height: 4vh;
   text-align: center;
   border-collapse: collapse;
 
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   border-radius: 10px;
-  border: 3px solid rgba(255, 255, 255, 50);
+  border: 3px solid rgb(43, 167, 12);
 }
 
 #f3 {
@@ -154,6 +154,18 @@ table {
 }
 #b6 {
   background-image: url('../images/imgNr5.png');
+  background-size: cover;
+}
+#l3 {
+  background-image: url('../images/imgNr6.png');
+  background-size: cover;
+}
+#g3 {
+  background-image: url('../images/imgNr7.png');
+  background-size: cover;
+}
+#b8 {
+  background-image: url('../images/imgNr8.png');
   background-size: cover;
 }
 
@@ -206,3 +218,34 @@ table {
   height: auto;
   width: 62.5vh;
 }
+#hiddenBoxQ6 {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 3px solid rgba(255, 255, 255, 50);
+  height: auto;
+  width: 62.5vh;
+}
+#hiddenBoxQ7 {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 3px solid rgba(255, 255, 255, 50);
+  height: auto;
+  width: 62.5vh;
+}
+#hiddenBoxQ8 {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 3px solid rgba(255, 255, 255, 50);
+  height: auto;
+  width: 62.5vh;
+}
+
