@@ -69,7 +69,7 @@ function sumbit1() {
     document.getElementById('f6').innerHTML = letters4[4]
     document.getElementById('g6').innerHTML = letters4[5]
   } else if (userInput == words[5]) {
-    document.getElementById('Q2').style.textDecoration = 'line-through';
+    document.getElementById('Q6').style.textDecoration = 'line-through';
 
     document.getElementById('l3').innerHTML = letters5[0];
     document.getElementById('l4').innerHTML = letters5[1];
@@ -77,6 +77,27 @@ function sumbit1() {
     document.getElementById('l6').innerHTML = letters5[3];
     document.getElementById('l7').innerHTML = letters5[4];
     document.getElementById('l8').innerHTML = letters5[5];
+  }  else if (userInput == words[6]) {
+    document.getElementById('Q7').style.textDecoration = 'line-through';
+    
+
+    document.getElementById('g3').innerHTML = letters6[0];
+    document.getElementById('g4').innerHTML = letters6[1];
+    document.getElementById('g5').innerHTML = letters6[2];
+    document.getElementById('g6').innerHTML = letters6[3];
+    document.getElementById('g7').innerHTML = letters6[4];
+    document.getElementById('g8').innerHTML = letters6[5];
+  }  else if (userInput == words[7]) {
+    document.getElementById('Q8').style.textDecoration = 'line-through';
+
+    document.getElementById('b8').innerHTML = letters7[0];
+    document.getElementById('c8').innerHTML = letters7[1];
+    document.getElementById('d8').innerHTML = letters7[2];
+    document.getElementById('e8').innerHTML = letters7[3];
+    document.getElementById('f8').innerHTML = letters7[4];
+    document.getElementById('g8').innerHTML = letters7[5];
+    document.getElementById('h8').innerHTML = letters7[6];
+    document.getElementById('i8').innerHTML = letters7[7];
   }
 
   // Change style according to input
