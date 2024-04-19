@@ -296,6 +296,7 @@ document.getElementById('l7').addEventListener('click', () => {
     console.log('Div Q4 wird nichtmehr angezeigt');
     shownQ4 = false;
   }
+});
 
 
 //Div Box Q5
