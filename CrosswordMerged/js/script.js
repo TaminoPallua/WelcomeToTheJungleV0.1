@@ -63,21 +63,18 @@ function sumbit1() {
   } else if (userInput == words[4]) {
     document.getElementById('Q5').style.textDecoration = 'line-through';
 
-<<<<<<< Updated upstream
     document.getElementById('b6').innerHTML = letters4[0]
     document.getElementById('c6').innerHTML = letters4[1]
     document.getElementById('d6').innerHTML = letters4[2]
     document.getElementById('e6').innerHTML = letters4[3]
     document.getElementById('f6').innerHTML = letters4[4]
     document.getElementById('g6').innerHTML = letters4[5]
-=======
     document.getElementById('c7').innerHTML = letters4[0];
     document.getElementById('d7').innerHTML = letters4[1];
     document.getElementById('e7').innerHTML = letters4[2];
     document.getElementById('f7').innerHTML = letters4[3];
     document.getElementById('g7').innerHTML = letters4[4];
     document.getElementById('h7').innerHTML = letters4[5];
->>>>>>> Stashed changes
   } else if (userInput == words[5]) {
     document.getElementById('Q6').style.textDecoration = 'line-through';
 
@@ -163,7 +160,6 @@ document.getElementById('f3').addEventListener('click', () => {
   if (!shownQ1) {
     document.getElementById('hiddenBoxQ1').style.display = 'block';
     shownQ1 = true;
-<<<<<<< Updated upstream
     console.log('Div Q1 wird angezeigt')
     //Hide other Question Divs  
     document.getElementById("hiddenBoxQ2").style.display = "none";
@@ -173,19 +169,16 @@ document.getElementById('f3').addEventListener('click', () => {
     document.getElementById("hiddenBoxQ6").style.display = "none";
     document.getElementById("hiddenBoxQ7").style.display = "none";
     document.getElementById("hiddenBoxQ8").style.display = "none";
-=======
     console.log('Div Q1 wird angezeigt');
     //Hide other Question Divs
     document.getElementById('hiddenBoxQ2').style.display = 'none';
     document.getElementById('hiddenBoxQ3').style.display = 'none';
     document.getElementById('hiddenBoxQ4').style.display = 'none';
     document.getElementById('hiddenBoxQ5').style.display = 'none';
->>>>>>> Stashed changes
     shownQ2 = false;
     shownQ3 = false;
     shownQ4 = false;
     shownQ5 = false;
-<<<<<<< Updated upstream
     shownQ6 = false;
     shownQ7 = false;
     shownQ8 = false;
@@ -194,11 +187,9 @@ document.getElementById('f3').addEventListener('click', () => {
   else if (shownQ1) {
     document.getElementById("hiddenBoxQ1").style.display = "none";
     console.log('Div Q1 wird nichtmehr angezeigt')
-=======
   } else if (shownQ1) {
     document.getElementById('hiddenBoxQ1').style.display = 'none';
     console.log('Div Q1 wird nichtmehr angezeigt');
->>>>>>> Stashed changes
     shownQ1 = false;
   }
 });
@@ -208,7 +199,6 @@ document.getElementById('j3').addEventListener('click', () => {
   if (!shownQ2) {
     document.getElementById('hiddenBoxQ2').style.display = 'block';
     shownQ2 = true;
-<<<<<<< Updated upstream
     document.getElementById("hiddenBoxQ1").style.display = "none";
     document.getElementById("hiddenBoxQ3").style.display = "none";
     document.getElementById("hiddenBoxQ4").style.display = "none";
@@ -216,17 +206,14 @@ document.getElementById('j3').addEventListener('click', () => {
     document.getElementById("hiddenBoxQ6").style.display = "none";
     document.getElementById("hiddenBoxQ7").style.display = "none";
     document.getElementById("hiddenBoxQ8").style.display = "none";
-=======
     document.getElementById('hiddenBoxQ1').style.display = 'none';
     document.getElementById('hiddenBoxQ3').style.display = 'none';
     document.getElementById('hiddenBoxQ4').style.display = 'none';
     document.getElementById('hiddenBoxQ5').style.display = 'none';
->>>>>>> Stashed changes
     shownQ1 = false;
     shownQ3 = false;
     shownQ4 = false;
     shownQ5 = false;
-<<<<<<< Updated upstream
     shownQ6 = false;
     shownQ7 = false;
     shownQ8 = false;
@@ -236,12 +223,10 @@ document.getElementById('j3').addEventListener('click', () => {
   else if (shownQ2) {
     document.getElementById("hiddenBoxQ2").style.display = "none";
     console.log('Div Q2 wird nichtmehr angezeigt')
-=======
     console.log('Div Q2 wird angezeigt');
   } else if (shownQ2) {
     document.getElementById('hiddenBoxQ2').style.display = 'none';
     console.log('Div Q2 wird nichtmehr angezeigt');
->>>>>>> Stashed changes
     shownQ2 = false;
   }
 });
@@ -251,7 +236,6 @@ document.getElementById('j4').addEventListener('click', () => {
   if (!shownQ3) {
     document.getElementById('hiddenBoxQ3').style.display = 'block';
     shownQ3 = true;
-<<<<<<< Updated upstream
     document.getElementById("hiddenBoxQ1").style.display = "none";
     document.getElementById("hiddenBoxQ2").style.display = "none";
     document.getElementById("hiddenBoxQ4").style.display = "none";
@@ -259,17 +243,14 @@ document.getElementById('j4').addEventListener('click', () => {
     document.getElementById("hiddenBoxQ6").style.display = "none";
     document.getElementById("hiddenBoxQ7").style.display = "none";
     document.getElementById("hiddenBoxQ8").style.display = "none";
-=======
     document.getElementById('hiddenBoxQ1').style.display = 'none';
     document.getElementById('hiddenBoxQ2').style.display = 'none';
     document.getElementById('hiddenBoxQ4').style.display = 'none';
     document.getElementById('hiddenBoxQ5').style.display = 'none';
->>>>>>> Stashed changes
     shownQ1 = false;
     shownQ2 = false;
     shownQ4 = false;
     shownQ5 = false;
-<<<<<<< Updated upstream
     shownQ6 = false;
     shownQ7 = false;
     shownQ8 = false;
@@ -279,12 +260,10 @@ document.getElementById('j4').addEventListener('click', () => {
   else if (shownQ3) {
     document.getElementById("hiddenBoxQ3").style.display = "none";
     console.log('Div Q3 wird nichtmehr angezeigt')
-=======
     console.log('Div Q3 wird angezeigt');
   } else if (shownQ3) {
     document.getElementById('hiddenBoxQ3').style.display = 'none';
     console.log('Div Q3 wird nichtmehr angezeigt');
->>>>>>> Stashed changes
     shownQ3 = false;
   }
 });
@@ -294,7 +273,6 @@ document.getElementById('l7').addEventListener('click', () => {
   if (!shownQ4) {
     document.getElementById('hiddenBoxQ4').style.display = 'block';
     shownQ4 = true;
-<<<<<<< Updated upstream
     document.getElementById("hiddenBoxQ1").style.display = "none";
     document.getElementById("hiddenBoxQ2").style.display = "none";
     document.getElementById("hiddenBoxQ3").style.display = "none";
@@ -302,17 +280,14 @@ document.getElementById('l7').addEventListener('click', () => {
     document.getElementById("hiddenBoxQ6").style.display = "none";
     document.getElementById("hiddenBoxQ7").style.display = "none";
     document.getElementById("hiddenBoxQ8").style.display = "none";
-=======
     document.getElementById('hiddenBoxQ1').style.display = 'none';
     document.getElementById('hiddenBoxQ2').style.display = 'none';
     document.getElementById('hiddenBoxQ3').style.display = 'none';
     document.getElementById('hiddenBoxQ5').style.display = 'none';
->>>>>>> Stashed changes
     shownQ1 = false;
     shownQ2 = false;
     shownQ3 = false;
     shownQ5 = false;
-<<<<<<< Updated upstream
     shownQ6 = false;
     shownQ7 = false;
     shownQ8 = false;
@@ -322,12 +297,10 @@ document.getElementById('l7').addEventListener('click', () => {
   else if (shownQ4) {
     document.getElementById("hiddenBoxQ4").style.display = "none";
     console.log('Div Q4 wird nichtmehr angezeigt')
-=======
     console.log('Div Q4 wird angezeigt');
   } else if (shownQ4) {
     document.getElementById('hiddenBoxQ4').style.display = 'none';
     console.log('Div Q4 wird nichtmehr angezeigt');
->>>>>>> Stashed changes
     shownQ4 = false;
   }
 });
@@ -337,7 +310,6 @@ document.getElementById('b6').addEventListener('click', () => {
   if (!shownQ5) {
     document.getElementById('hiddenBoxQ5').style.display = 'block';
     shownQ5 = true;
-<<<<<<< Updated upstream
     document.getElementById("hiddenBoxQ1").style.display = "none";
     document.getElementById("hiddenBoxQ2").style.display = "none";
     document.getElementById("hiddenBoxQ3").style.display = "none";
@@ -345,17 +317,14 @@ document.getElementById('b6').addEventListener('click', () => {
     document.getElementById("hiddenBoxQ6").style.display = "none";
     document.getElementById("hiddenBoxQ7").style.display = "none";
     document.getElementById("hiddenBoxQ8").style.display = "none";
-=======
     document.getElementById('hiddenBoxQ1').style.display = 'none';
     document.getElementById('hiddenBoxQ2').style.display = 'none';
     document.getElementById('hiddenBoxQ3').style.display = 'none';
     document.getElementById('hiddenBoxQ4').style.display = 'none';
->>>>>>> Stashed changes
     shownQ1 = false;
     shownQ2 = false;
     shownQ3 = false;
     shownQ4 = false;
-<<<<<<< Updated upstream
     shownQ6 = false;
     shownQ7 = false;
     shownQ8 = false;
@@ -365,17 +334,14 @@ document.getElementById('b6').addEventListener('click', () => {
   else if (shownQ5) {
     document.getElementById("hiddenBoxQ5").style.display = "none";
     console.log('Div Q5 wird nichtmehr angezeigt')
-=======
     console.log('Div Q5 wird angezeigt');
   } else if (shownQ5) {
     document.getElementById('hiddenBoxQ5').style.display = 'none';
     console.log('Div Q5 wird nichtmehr angezeigt');
->>>>>>> Stashed changes
     shownQ5 = false;
   }
 });
 
-<<<<<<< Updated upstream
 //Div Box Q6
 document.getElementById('l3').addEventListener('click', () => {
   if (!shownQ6) {
@@ -466,11 +432,9 @@ document.getElementById('b8').addEventListener('click', () => {
 document.getElementById("refresh_btn").addEventListener("click", ()=>{
   window.location = "";
 })
-=======
 document.getElementById('refresh_btn').addEventListener('click', () => {
   window.location = '';
 });
->>>>>>> Stashed changes
 
 function goBack() {
   window.history.back();
