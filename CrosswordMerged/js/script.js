@@ -21,6 +21,7 @@ let letters6 = ['L', 'I', 'A', 'N', 'E', 'N'];
 let letters7 = ['A', 'M', 'A', 'Z', 'O', 'N', 'A', 'S'];
 
 let backgroundAudio = new Audio('/CrosswordMerged/audio/Level1Background.mp3');
+//
 
 document.addEventListener('DOMContentLoaded', () => {
   backgroundAudio.play();
@@ -295,6 +296,7 @@ document.getElementById('l7').addEventListener('click', () => {
     console.log('Div Q4 wird nichtmehr angezeigt');
     shownQ4 = false;
   }
+
 
 //Div Box Q5
 document.getElementById('b6').addEventListener('click', () => {
