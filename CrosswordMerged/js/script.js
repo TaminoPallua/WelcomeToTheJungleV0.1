@@ -330,10 +330,7 @@ document.getElementById('l7').addEventListener('click', () => {
 >>>>>>> Stashed changes
     shownQ4 = false;
   }
-<<<<<<< HEAD
 });
-=======
->>>>>>> parent of 255fd58 (TEst)
 
 //Div Box Q5
 document.getElementById('b6').addEventListener('click', () => {
