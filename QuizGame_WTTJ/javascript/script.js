@@ -1,4 +1,6 @@
 //HTML Elements
+// Set sessionstorage for scrollable
+sessionStorage.setItem('globalPositionIndex', 3);
 const answerContainer = document.getElementById('answerContainer');
 const questionText = document.querySelector('#questionText');
 const score_container = document.querySelector('#score_h2');
@@ -419,7 +421,6 @@ function shuffleQuestions() {
   questionsEasy.sort(() => Math.random() - 0.5);
   questionsMedium.sort(() => Math.random() - 0.5);
   questionsHard.sort(() => Math.random() - 0.5);
-  
 
   //Randomize Answer presets
   for (let i = 0; i < questionsEasy.length; i++) {
@@ -432,3 +433,7 @@ function shuffleQuestions() {
     questionsHard[i].answers.sort(() => Math.random() - 0.5);
   }
 }
+
+document.getElementById('return-btn').addEventListener('click', () => {
+  window.history.back();
+});

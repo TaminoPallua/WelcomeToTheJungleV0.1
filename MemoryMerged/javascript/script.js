@@ -35,7 +35,6 @@ const data = [
   './images/kolibri2.jpg',
 ];
 
-
 //Background music
 let backgroundAudio = new Audio('/MemoryMerged//audio/Level1Background.mp3');
 
@@ -43,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
   backgroundAudio.play();
   backgroundAudio.volume = 0.25;
 });
-
 
 function StartGame(cards) {
   //Reset all variables for next Match
@@ -232,13 +230,11 @@ function checkWin() {
 //Generate Cards on Load
 window.addEventListener('DOMContentLoaded', () => {
   StartGame(36);
+  sessionStorage.setItem('globalPositionIndex', 1);
 });
-
-
 
 //Button for returning to the main page
 
-document.getElementById("return_btn").addEventListener("click", ()=>{
-  window.history.back();
-
-})
+document.getElementById('return_btn').addEventListener('click', () => {
+  window.location = '../index.html';
+});

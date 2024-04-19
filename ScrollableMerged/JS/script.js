@@ -11,7 +11,7 @@ window.addEventListener(
 
 //-------------------- VEHICLE VARIABLES ----------------------------//
 const vehicle = document.getElementById('vehicle'); // Fahrzeug holen
-let positionX = 50; // Startposition
+let positionX;
 let isMoving = false;
 let firstTurned = false; // Schauen ob das Fahrzeug gedreht ist
 const screenWidth = window.innerWidth; // Bildschirmbreite holen
@@ -63,6 +63,25 @@ let xCoordinateStation4 = station4rect.left;
 // HiddenBox 4
 let hiddenboxLevel4 = document.getElementById('hiddenBoxLevel4');
 
+//  //-------------------- Minigame starter Positions ----------------------------//
+
+if (sessionStorage.getItem('globalPositionIndex') == 0) {
+  //Startposition, wenn kein Terminal angesteuert wurde
+  positionX = 50;
+} else if (sessionStorage.getItem('globalPositionIndex') == 1) {
+  // Setzten des Fahrzeuges auf der X-Achse basierend auf der Station wo das Fahrzeug war
+  positionX = xCoordinateStation1;
+} else if (sessionStorage.getItem('globalPositionIndex') == 2) {
+  // Setzten des Fahrzeuges auf der X-Achse basierend auf der Station wo das Fahrzeug war
+  positionX = xCoordinateStation2 + 100;
+} else if (sessionStorage.getItem('globalPositionIndex') == 3) {
+  // Setzten des Fahrzeuges auf der X-Achse basierend auf der Station wo das Fahrzeug war
+  positionX = xCoordinateStation3;
+} else if (sessionStorage.getItem('globalPositionIndex') == 4) {
+  // Setzten des Fahrzeuges auf der X-Achse basierend auf der Station wo das Fahrzeug war
+  positionX = xCoordinateStation4;
+}
+
 //  //-------------------- AUDIO VARIABLES ----------------------------//
 
 // Set Engine sound to the default (change happens when the vehicle is switched)
@@ -87,6 +106,10 @@ var station4_AI_Voice = new Audio('/ScrollableMerged/audio/AI-Voices/Station4_KI
 //-------------------- MOUSE WHEEL EVENT ----------------------------//
 
 document.addEventListener('wheel', (event) => {
+  setTimeout(function () {
+    sessionStorage.setItem('globalPositionIndex', 0);
+  }, 100);
+  console.log(positionX);
   //-------------------- VEHICLE MOVEMENT ----------------------------//
 
   let direction = event.deltaY > 0 ? 1 : -1; // Vorwärts oder rückwärts
@@ -263,8 +286,6 @@ document.addEventListener('wheel', (event) => {
   //Vehicle X-Koordinate
   let vehicleRect = vehicle.getBoundingClientRect();
   let xCoordinateVehicle = vehicleRect.left;
-  //Position des Fahrzeges im Session Storage ablegen
-  sessionStorage.setItem('vehicleX', xCoordinateVehicle);
 
   //Scroll to top of the page before it reloads
   window.onbeforeunload = () => {
@@ -419,12 +440,11 @@ document.addEventListener('wheel', (event) => {
     engineAudio.volume = 0.3;
   }
 
-  // window.addEventListener('load', () => {
-  //   if (sessionStorage.getItem('vehicleX')) {
-  //     xCoordinateVehicle = sessionStorage.getItem('vehicleX');
-  //   }
-  //   vehicle.s;
-  // });
+  window.addEventListener('load', () => {
+    if (locationChangeStaion1) {
+      SetVehiclePos(globalPositionIndex);
+    }
+  });
 });
 
 //Funktionen für den Level wechsel
@@ -459,3 +479,45 @@ window.addEventListener('resize', function () {
     }
   }
 });
+
+window.addEventListener('load', () => {
+  SetVehiclePos(sessionStorage.getItem('globalPositionIndex'));
+});
+
+// SetVehiclePos(1);
+
+function SetVehiclePos(station) {
+  if (station == 0) {
+    vehicle.style.left = 0;
+    vehicle.src = '/ScrollableMerged/images/vehicles/Vehicle_jeep.png';
+    window.scrollTo(0, 0);
+  }
+  if (station == 1) {
+    window.scrollTo(0, 0);
+    // Set physical Postion of the vehicle according to the level and set the correct vehicle image
+    level = 0;
+    vehicle.src = '/ScrollableMerged/images/vehicles/Vehicle_jeep.png';
+    vehicle.style.transform = `translateX(${xCoordinateStation1}px) rotateX(0deg)`;
+  } else if (station == 2) {
+    window.scrollTo(0, 0);
+    vehicle.src = '/ScrollableMerged/images/vehicles/Vehicle_bagger.png';
+    level = 1;
+    vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 6.5}vh`;
+    vehicle.style.transform = `translateX(${xCoordinateStation2 + 100}px) rotateX(0deg)`;
+  } else if (station == 3) {
+    //Scroll down
+    window.scrollBy(0, window.innerHeight + 50);
+    vehicle.src = '/ScrollableMerged/images/vehicles/Vehicle_truck.png';
+    level = 2;
+    vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 18}vh`;
+    vehicle.style.transform = `translateX(${xCoordinateStation3}px) rotateX(0deg)`;
+  } else if (station == 4) {
+    // level = 3;
+    // //Scroll down
+    // window.scrollBy(0, window.innerHeight + 50);
+    // vehicle.src = '/ScrollableMerged/images/vehicles/Vehicle_XXX.jpg';
+    // level = 3;
+    // vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight}vh`;
+    // vehicle.style.transform = `translateX(${xCoordinateStation4}px) rotateX(0deg)`;
+  }
+}
