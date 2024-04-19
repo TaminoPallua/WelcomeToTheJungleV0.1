@@ -11,7 +11,7 @@ window.addEventListener(
 
 //-------------------- VEHICLE VARIABLES ----------------------------//
 const vehicle = document.getElementById('vehicle'); // Fahrzeug holen
-let positionX;
+let positionX = 50;
 let isMoving = false;
 let firstTurned = false; // Schauen ob das Fahrzeug gedreht ist
 const screenWidth = window.innerWidth; // Bildschirmbreite holen
