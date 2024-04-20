@@ -21,7 +21,6 @@ h1 {
   text-shadow: 0px 0px 20px white;
   font-family: 'JurassicPark', sans-serif;
   margin: 0 auto;
-  
 }
 
 h2 {
@@ -77,7 +76,7 @@ table {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
-  border-radius: 10px;
+  border-radius: 2px;
   border: 3px solid rgba(255, 255, 255, 50);
   font-size: 20px;
 }
@@ -90,7 +89,7 @@ table {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
-  border-radius: 10px;
+  border-radius: 2px;
   border: 3px solid rgba(255, 255, 255, 50);
   margin-left: 2vh;
 }
@@ -177,6 +176,13 @@ table {
   -webkit-backdrop-filter: blur(2px);
   border-radius: 10px;
   border: 3px solid rgba(255, 255, 255, 50);
+  width: 30vh;
+  padding: 50px;
+  margin: 15px;
+  position: absolute;
+  top: 45%;
+  right: 10%;
+  transform: translate(-10%, -45%);
 }
 #hiddenBoxQ2 {
   background: rgba(255, 255, 255, 0.25);
@@ -186,7 +192,13 @@ table {
   border-radius: 10px;
   border: 3px solid rgba(255, 255, 255, 50);
   height: auto;
-  width: 62.5vh;
+  width: 30vh;
+  padding: 50px;
+  margin: 15px;
+  position: absolute;
+  top: 45%;
+  right: 10%;
+  transform: translate(-10%, -45%);
 }
 #hiddenBoxQ3 {
   background: rgba(255, 255, 255, 0.25);
@@ -196,7 +208,13 @@ table {
   border-radius: 10px;
   border: 3px solid rgba(255, 255, 255, 50);
   height: auto;
-  width: 62.5vh;
+  width: 30vh;
+  padding: 50px;
+  margin: 15px;
+  position: absolute;
+  top: 45%;
+  right: 10%;
+  transform: translate(-10%, -45%);
 }
 #hiddenBoxQ4 {
   background: rgba(255, 255, 255, 0.25);
@@ -206,7 +224,13 @@ table {
   border-radius: 10px;
   border: 3px solid rgba(255, 255, 255, 50);
   height: auto;
-  width: 62.5vh;
+  width: 30vh;
+  padding: 50px;
+  margin: 15px;
+  position: absolute;
+  top: 45%;
+  right: 10%;
+  transform: translate(-10%, -45%);
 }
 #hiddenBoxQ5 {
   background: rgba(255, 255, 255, 0.25);
@@ -216,7 +240,13 @@ table {
   border-radius: 10px;
   border: 3px solid rgba(255, 255, 255, 50);
   height: auto;
-  width: 62.5vh;
+  width: 30vh;
+  padding: 50px;
+  margin: 15px;
+  position: absolute;
+  top: 45%;
+  right: 10%;
+  transform: translate(-10%, -45%);
 }
 #hiddenBoxQ6 {
   background: rgba(255, 255, 255, 0.25);
@@ -226,7 +256,13 @@ table {
   border-radius: 10px;
   border: 3px solid rgba(255, 255, 255, 50);
   height: auto;
-  width: 62.5vh;
+  width: 30vh;
+  padding: 50px;
+  margin: 15px;
+  position: absolute;
+  top: 45%;
+  right: 10%;
+  transform: translate(-10%, -45%);
 }
 #hiddenBoxQ7 {
   background: rgba(255, 255, 255, 0.25);
@@ -236,7 +272,13 @@ table {
   border-radius: 10px;
   border: 3px solid rgba(255, 255, 255, 50);
   height: auto;
-  width: 62.5vh;
+  width: 30vh;
+  padding: 50px;
+  margin: 15px;
+  position: absolute;
+  top: 45%;
+  right: 10%;
+  transform: translate(-10%, -45%);
 }
 #hiddenBoxQ8 {
   background: rgba(255, 255, 255, 0.25);
@@ -246,6 +288,11 @@ table {
   border-radius: 10px;
   border: 3px solid rgba(255, 255, 255, 50);
   height: auto;
-  width: 62.5vh;
+  width: 30vh;
+  padding: 50px;
+  margin: 15px;
+  position: absolute;
+  top: 45%;
+  right: 10%;
+  transform: translate(-10%, -45%);
 }
-
