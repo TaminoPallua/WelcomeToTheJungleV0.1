@@ -40,13 +40,13 @@ body {
 @media (min-width: 1920px) {
   /* Makes the container look good on small screens */
   #questionText {
-    font-size: 16px !important;
+    font-size: 15px !important;
   }
   .answer-btn {
     margin: 25px 4 !important;
     height: 5vh !important;
     width: 18vw !important;
-    font-size: 15px !important;
+    font-size: 12px !important;
   }
   #next_btn {
     font-size: 22px !important;
@@ -165,7 +165,7 @@ body {
 
 /* Textstyle in scoreboard */
 .scoreText {
-  font-size: 25px;
+  font-size: 15px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 

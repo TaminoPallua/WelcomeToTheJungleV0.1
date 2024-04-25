@@ -267,7 +267,7 @@ function ShowQuestions() {
   let currentQuestion = selectedDifficultyArray[selectedDifficulty][currentQuestionIndex];
   let numQuestion = currentQuestionIndex + 1;
   //Display Question
-  questionText.innerHTML = `${numQuestion} / ${quizLenghts[selectedDifficulty]}. ${selectedDifficultyArray[selectedDifficulty][currentQuestionIndex].question}`;
+  questionText.innerHTML = `${numQuestion} / ${quizLenghts[selectedDifficulty]} <br> ${selectedDifficultyArray[selectedDifficulty][currentQuestionIndex].question}`;
 
   // Create Answer Buttons using a loop thats going through the answers Array
   currentQuestion.answers.forEach((answer) => {
