@@ -93,10 +93,10 @@ table {
   border: 3px solid rgba(255, 255, 255, 50);
   margin-left: 2vh;
 }
-
-.btnsubmitstyle:hover {
+/*Hover Event für den btnsubmit. Wurde entfernt, da die Website sonst zu langsam war*/
+/* .btnsubmitstyle:hover {
   background-color: rgb(47, 178, 47);
-}
+} */
 
 /* Schriftart */
 
