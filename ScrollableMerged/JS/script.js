@@ -236,7 +236,7 @@ document.addEventListener('wheel', (event) => {
     level1Audio.currentTime = 0;
     //Audio abspielen
     level0Audio.play();
-    level0Audio.volume = 0.2;
+    level0Audio.volume = 1;
   }
   if (level == 1 && isPLayingSound2 == false) {
     //Zurücketzten der flags
