@@ -465,7 +465,7 @@ function ThirdLevel(e) {
 }
 function FourthLevel(e) {
   if (e.key == 'Enter') {
-    window.location = '/Jump_And_RunMerged/index.html';
+    window.location = '/JumpAndRunMerged/index.html';
   }
 }
 

@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(./imgs/Background_JumpAndRun.jpg);
+  background-size: 100% 100%;
+}
+
+.world {
+  overflow: hidden;
+  position: relative;
+  bottom: -110px;
+}
+
+.score {
+  position: absolute;
+  font-size: 4rem;
+  top: 30px;
+  right: 100px;
+  color: white;
+
+  color: rgb(96, 15, 15);
+}
+
+/* .start-screen {
+  position: absolute;
+  font-size: 5vmin;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: 'JurassicPark';
+  color: rgb(96, 15, 15);
+  text-decoration: underline;
+  font-size: 90px;
+  font-weight: bold;
+} */
+
+.hide {
+  display: none;
+}
+
+.ground {
+  --left: 0;
+  position: absolute;
+  width: 300%;
+  bottom: -200px;
+  left: calc(var(--left) * 1%);
+  visibility: hidden;
+}
+
+.monkey {
+  --bottom: 0;
+  position: absolute;
+  left: 1%;
+  height: 20%;
+  bottom: calc(var(--bottom) * 1%);
+}
+
+.object {
+  position: absolute;
+  left: calc(var(--left) * 1%);
+  height: 30%;
+  bottom: -5%;
+}
+
+@font-face {
+  font-family: 'JurassicPark';
+  src: url(./fonts/Jurassic_Park.ttf);
+}
+
+.info-box-style {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0%);
+  width: 800px;
+  height: 350px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid black;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 3px solid rgba(255, 255, 255, 50);
+}
+
+.info-box-style > h1 {
+  position: relative;
+  font-family: 'JurassicPark';
+  font-size: 70px;
+  margin: 0;
+  padding: 0;
+}
+.info-box-style > p {
+  position: relative;
+  font-size: 22px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  /* line-height: 33px; */
+  font-weight: lighter;
+  color: black;
+}
+.info-box-style > h2 {
+  font-weight: bolder;
+  color: rgb(96, 15, 15);
+}
