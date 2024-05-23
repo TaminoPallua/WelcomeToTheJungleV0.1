@@ -20,11 +20,11 @@ let letters5 = ['J', 'A', 'G', 'U', 'A', 'R'];
 let letters6 = ['L', 'I', 'A', 'N', 'E', 'N'];
 let letters7 = ['A', 'M', 'A', 'Z', 'O', 'N', 'A', 'S'];
 
-let backgroundAudio = new Audio('/CrosswordMerged/audio/Level1Background.mp3');
+let backgroundAudio = new Audio('/CrosswordMerged/audio/crossword_music.mp3');
 
 document.addEventListener('DOMContentLoaded', () => {
   backgroundAudio.play();
-  backgroundAudio.volume = 0.2;
+  backgroundAudio.volume = 1;
   backgroundAudio.loop = true;
 });
 

@@ -16,6 +16,8 @@ const infoBox = document.querySelector('[data-info-box]');
 //Grab Monkey to hide when the Game ends
 const monkeyElem = document.querySelector('[data-monkey]');
 
+//Music
+const backgroundMusic = new Audio('./audio/JumpAndRun_music.mp3');
 setPixelToWorldScale();
 window.addEventListener('resize', setPixelToWorldScale);
 //Setup start when pressing Spacebar
@@ -73,6 +75,9 @@ function updateScore(delta) {
 }
 
 function handleStart() {
+  backgroundMusic.play();
+  backgroundMusic.volume = 1;
+  backgroundMusic.loop = true;
   monkeyElem.style.visibility = 'visible';
   lastTime = null;
   speedScale = 1;
@@ -86,6 +91,8 @@ function handleStart() {
 }
 
 function handleLose() {
+  backgroundMusic.pause();
+  backgroundMusic.currentTime = 0;
   setMonkeyLose();
   setTimeout(() => {
     document.addEventListener('keydown', (e) => {
