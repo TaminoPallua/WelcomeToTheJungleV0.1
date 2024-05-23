@@ -109,7 +109,7 @@ document.addEventListener('wheel', (event) => {
   setTimeout(function () {
     sessionStorage.setItem('globalPositionIndex', 0);
   }, 100);
-  console.log(positionX);
+  // console.log(positionX);
   //-------------------- VEHICLE MOVEMENT ----------------------------//
 
   let direction = event.deltaY > 0 ? 1 : -1; // Vorwärts oder rückwärts
@@ -147,17 +147,6 @@ document.addEventListener('wheel', (event) => {
     level -= 1;
     levelGlobal = level;
 
-    //Verschieben des Fahrzeuges auf der Y Achse
-    if (level == 1) {
-      // Ausnahme bei level 1 aufgrund von unterschiedlichen Bodenhöhen
-      vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 6.5}vh`;
-    } else if (level == 2) {
-      // Ausnahme bei level 2 aufgrund von unterschiedlichen Bodenhöhen
-      vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 18}vh`;
-    } else {
-      vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight}vh`;
-    }
-
     // Raufscollen wenn man die 2 Ebene betreten möchte
     if (level == 1) {
       window.scrollBy(0, -window.innerHeight);
@@ -174,6 +163,9 @@ document.addEventListener('wheel', (event) => {
     } else if (level == 2) {
       // Ausnahme bei level 2 aufgrund von unterschiedlichen Bodenhöhen
       vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 18}vh`;
+    } else if (level == 3) {
+      // Ausnahme bei level 2 aufgrund von unterschiedlichen Bodenhöhen
+      vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 9.5}vh`;
     } else {
       vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight}vh`;
     }

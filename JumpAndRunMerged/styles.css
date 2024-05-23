@@ -21,6 +21,12 @@ body {
   bottom: -110px;
 }
 
+@media (min-width: 2560px) {
+  .world {
+    bottom: -180px !important;
+  }
+}
+
 .score {
   position: absolute;
   font-size: 4rem;
