@@ -105,7 +105,7 @@ function handleLose() {
     infoBox.children[0].innerHTML = 'Game Over !';
     infoBox.children[0].style.fontSize = '180px';
     infoBox.removeChild(infoBox.children[1]);
-    infoBox.children[1].innerHTML = 'Press Enter to start a new try';
+    infoBox.children[1].innerHTML = 'Reload the page to start a new try';
     infoBox.classList.remove('hide');
   }, 100);
 }

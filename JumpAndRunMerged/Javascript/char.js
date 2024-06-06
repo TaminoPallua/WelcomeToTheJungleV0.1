@@ -10,7 +10,7 @@ const monkeyElem = document.querySelector('[data-monkey]');
 const JUMP_SPEED = 0.45;
 const GRAVITY = 0.0015;
 const MONKEY_FRAME_COUNT = 7;
-const FRAME_TIME = 100;
+const FRAME_TIME = 80;
 
 //Boolean, integer variables
 let isJumping;
