@@ -106,6 +106,7 @@ var station4_AI_Voice = new Audio('/ScrollableMerged/audio/AI-Voices/Station4_KI
 //-------------------- MOUSE WHEEL EVENT ----------------------------//
 
 document.addEventListener('wheel', (event) => {
+  // console.log(level);
   setTimeout(function () {
     sessionStorage.setItem('globalPositionIndex', 0);
   }, 100);
@@ -147,6 +148,17 @@ document.addEventListener('wheel', (event) => {
     level -= 1;
     levelGlobal = level;
 
+    //Code, welcher das Fahrzeug beom zurrückfahren auf der Y-Achse nach oben schiebt
+    if (level == 1) {
+      // Ausnahme bei level 1 aufgrund von unterschiedlichen Bodenhöhen
+      vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 6.5}vh`;
+    } else if (level == 2) {
+      // Ausnahme bei level 2 aufgrund von unterschiedlichen Bodenhöhen
+      vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 18}vh`;
+    } else {
+      vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight}vh`;
+    }
+
     // Raufscollen wenn man die 2 Ebene betreten möchte
     if (level == 1) {
       window.scrollBy(0, -window.innerHeight);
@@ -157,6 +169,7 @@ document.addEventListener('wheel', (event) => {
 
     levelGlobal = level;
 
+    //Code, welcher das Fahrzeug beim nach unten fahren auf der Y-Achse verschiebt
     if (level == 1) {
       // Ausnahme bei level 1 aufgrund von unterschiedlichen Bodenhöhen
       vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 6.5}vh`;
