@@ -178,7 +178,7 @@ document.addEventListener('wheel', (event) => {
       vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 18}vh`;
     } else if (level == 3) {
       // Ausnahme bei level 2 aufgrund von unterschiedlichen Bodenhöhen
-      vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 9.5}vh`;
+      vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 17}vh`;
     } else {
       vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight}vh`;
     }

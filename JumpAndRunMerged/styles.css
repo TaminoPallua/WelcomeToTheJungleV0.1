@@ -31,13 +31,15 @@ body {
   position: absolute;
   font-size: 8rem;
   top: 0%;
-  right: 43%;
+  left: 50%;
   color: white;
   text-shadow: 12px 12px 10px black;
-  text-align: center;
-  transform: translate(-43%);
+  text-align: left;
+  transform: translate(-50%, -0%);
   /* color: rgb(96, 15, 15); */
   color: white;
+  padding: 100px;
+  /* border: 1px solid black; */
 }
 
 /* .start-screen {
