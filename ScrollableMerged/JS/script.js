@@ -97,6 +97,11 @@ let isPLayingSound2 = false;
 let isPLayingSound3 = false;
 let isPLayingSound4 = false;
 
+level0Audio.loop = true;
+level1Audio.loop = true;
+level2Audio.loop = true;
+level3Audio.loop = true;
+
 //AI Voices
 var station1_AI_Voice = new Audio('/ScrollableMerged/audio/AI-Voices/Station1_KI_Voice.mp3');
 var station2_AI_Voice = new Audio('/ScrollableMerged/audio/AI-Voices/Station2_KI_Voice.mp3');
@@ -256,7 +261,7 @@ document.addEventListener('wheel', (event) => {
     level2Audio.currentTime = 0;
     //Audio abspielen
     level1Audio.play();
-    level1Audio.volume = 0.2;
+    level1Audio.volume = 1;
   }
   if (level == 2 && isPLayingSound3 == false) {
     //Zurücketzten der flags
@@ -271,7 +276,7 @@ document.addEventListener('wheel', (event) => {
     level3Audio.currentTime = 0;
     //Audio abspielen
     level2Audio.play();
-    level2Audio.volume = 0.2;
+    level2Audio.volume = 1;
   }
   if (level == 3 && isPLayingSound4 == false) {
     //Zurücketzten der flags
@@ -283,7 +288,7 @@ document.addEventListener('wheel', (event) => {
     level2Audio.currentTime = 0;
     //Audio abspielen
     level3Audio.play();
-    level3Audio.volume = 0.2;
+    level3Audio.volume = 1;
   }
 
   //-------------------- STATION VERLINKUNG ----------------------------//
