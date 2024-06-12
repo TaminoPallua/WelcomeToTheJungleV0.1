@@ -525,9 +525,9 @@ function SetVehiclePos(station) {
     level = 3;
     //Scroll down
     window.scrollBy(0, window.innerHeight + 50);
-    vehicle.src = '/ScrollableMerged/images/vehicles/Vehicle_XXX.jpg';
+    vehicle.src = '/ScrollableMerged/images/vehicles/vehicle_offroad.png';
     level = 3;
-    vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight}vh`;
+    vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 22}vh`;
     vehicle.style.transform = `translateX(${xCoordinateStation4}px) rotateX(0deg)`;
   }
 }

@@ -2,6 +2,9 @@ import { updateGround, setupGround } from './ground.js';
 import { updateMonkey, setupMonkey, getMonkeyRect, setMonkeyLose } from './char.js';
 import { updateObject, setupObject, getObjectRects } from './objects.js';
 
+//Set sessionStorage for scrollable
+sessionStorage.setItem('globalPositionIndex', 4);
+
 const WORLD_WIDTH = 100;
 const WORLD_HEIGHT = 30;
 const SPEED_SCALE_INCREASE = 0.00001;

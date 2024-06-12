@@ -4,6 +4,7 @@ import {
   getCustomProperty,
 } from './updateCustomProperty.js';
 
+
 const objectSelectionArray = ['./imgs/object0.png', './imgs/object1.png'];
 const SPEED = 0.05;
 const OBJECT_INTERVAL_MIN = 800;
