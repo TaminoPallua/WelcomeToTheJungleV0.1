@@ -434,6 +434,8 @@ function shuffleQuestions() {
   }
 }
 
-document.getElementById('return-btn').addEventListener('click', () => {
-  window.history.back();
+document.addEventListener('keydown', (e) => {
+  if (e.key == 'Escape') {
+    window.history.back();
+  }
 });

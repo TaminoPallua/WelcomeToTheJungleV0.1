@@ -124,3 +124,9 @@ function setPixelToWorldScale() {
   worldElem.style.width = `${WORLD_WIDTH * worldToPixelScale}px`;
   worldElem.style.height = `${WORLD_HEIGHT * worldToPixelScale}px`;
 }
+
+document.addEventListener('keydown', (e) => {
+  if (e.key == 'Escape') {
+    window.history.back();
+  }
+});
