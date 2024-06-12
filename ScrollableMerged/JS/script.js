@@ -183,7 +183,7 @@ document.addEventListener('wheel', (event) => {
       vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 18}vh`;
     } else if (level == 3) {
       // Ausnahme bei level 2 aufgrund von unterschiedlichen Bodenhöhen
-      vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 17}vh`;
+      vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 22}vh`;
     } else {
       vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight}vh`;
     }
@@ -217,7 +217,7 @@ document.addEventListener('wheel', (event) => {
   }
   if (level == 3) {
     //Change vehicle
-    // vehicle.src = '/ScrollableMerged/images/vehicles/Vehicle_XXX.png';
+    vehicle.src = '/ScrollableMerged/images/vehicles/vehicle_offroad.png';
     // //Change engineSound
     // engineAudio = new Audio('/ScrollableMerged/audio/EngineSounds/XXX_EngineSound.mp3');
   }
@@ -414,8 +414,8 @@ document.addEventListener('wheel', (event) => {
 
   //Station 4
   if (
-    xCoordinateVehicle + 50 >= xCoordinateStation4 &&
-    xCoordinateVehicle <= xCoordinateStation4 + vehicleWidth &&
+    xCoordinateVehicle + 100 >= xCoordinateStation4 &&
+    xCoordinateVehicle + 150 <= xCoordinateStation4 + vehicleWidth &&
     level == 3
   ) {
     hiddenboxLevel4.style.display = 'block';
@@ -522,12 +522,12 @@ function SetVehiclePos(station) {
     vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight + 18}vh`;
     vehicle.style.transform = `translateX(${xCoordinateStation3}px) rotateX(0deg)`;
   } else if (station == 4) {
-    // level = 3;
-    // //Scroll down
-    // window.scrollBy(0, window.innerHeight + 50);
-    // vehicle.src = '/ScrollableMerged/images/vehicles/Vehicle_XXX.jpg';
-    // level = 3;
-    // vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight}vh`;
-    // vehicle.style.transform = `translateX(${xCoordinateStation4}px) rotateX(0deg)`;
+    level = 3;
+    //Scroll down
+    window.scrollBy(0, window.innerHeight + 50);
+    vehicle.src = '/ScrollableMerged/images/vehicles/Vehicle_XXX.jpg';
+    level = 3;
+    vehicle.style.top = `${numberOfWindowHeigths * level * levelHeight}vh`;
+    vehicle.style.transform = `translateX(${xCoordinateStation4}px) rotateX(0deg)`;
   }
 }
