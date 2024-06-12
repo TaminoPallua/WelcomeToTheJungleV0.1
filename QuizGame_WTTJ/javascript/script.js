@@ -17,7 +17,7 @@ let blockLevelButtons = false;
 
 //Background music
 
-let backgroundMusic = new Audio('/QuizGame_WTTJ/audio/Level1Background.mp3');
+let backgroundMusic = new Audio('/QuizGame_WTTJ/audio/quiz_backgroundMusic.mp3');
 
 //Question/Answer Array
 
@@ -394,7 +394,7 @@ window.addEventListener('load', () => {
 
   //StartBackgroundMusic
   backgroundMusic.play();
-  backgroundMusic.volume = 0.2;
+  backgroundMusic.volume = 1;
   backgroundMusic.loop = true;
 });
 

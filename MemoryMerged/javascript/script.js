@@ -43,6 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
   backgroundAudio.volume = 0.25;
 });
 
+document.addEventListener('keydown', (e) => {
+  if (e.key == 'Escape') {
+    window.history.back();
+  }
+});
+
 function StartGame(cards) {
   //Reset all variables for next Match
   cardsGlobal = cards;

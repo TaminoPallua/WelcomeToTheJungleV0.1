@@ -393,3 +393,9 @@ document.getElementById('b8').addEventListener('click', () => {
 function goBack() {
   window.history.back();
 }
+
+document.addEventListener('keydown', (e) => {
+  if (e.key == 'Escape') {
+    window.history.back();
+  }
+});

@@ -82,6 +82,7 @@ body {
   font-family: 'JurassicPark', sans-serif;
   /* border: 1px solid black; */
   margin-bottom: 0 !important;
+  margin-top: 10px;
 }
 
 .quiz-container {
@@ -99,8 +100,9 @@ body {
   height: 12%;
 }
 
-.answer-Container {
-  position: absolute;
+.answer-container {
+  display: grid;
+  justify-content: space-around;
 }
 
 #questionText::first-letter {
@@ -190,7 +192,7 @@ body {
 
 /* Break between answer and question board */
 hr {
-  margin-bottom: 15%;
+  margin-bottom: 0;
 }
 
 /* Question board */
