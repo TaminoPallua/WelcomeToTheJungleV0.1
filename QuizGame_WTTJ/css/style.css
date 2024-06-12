@@ -37,7 +37,7 @@ body {
   border-radius: 22px;
 }
 
-@media (min-width: 1920px) {
+@media (max-width: 1920px) {
   /* Makes the container look good on small screens */
   #questionText {
     font-size: 15px !important;
@@ -53,16 +53,22 @@ body {
   }
 }
 
-@media (min-width: 2560px) {
+@media (max-width: 2560px) {
   /* Makes the container look good on small screens */
   #questionText {
-    font-size: 20px !important;
+    font-size: 16px !important;
+  }
+  #header {
+    font-size: 65px !important;
+  }
+  #break_styleElement {
+    margin-top: 10%;
   }
   .answer-btn {
-    margin: 25px 4 !important;
+    margin: 25px !important;
     height: 6vh !important;
-    width: 20vw !important;
-    font-size: 20px !important;
+    width: 18vw !important;
+    font-size: 15.5px !important;
   }
   #next_btn {
     font-size: 24px !important;
@@ -98,7 +104,7 @@ body {
 }
 
 #questionText::first-letter {
-  color: red;
+  color: rgb(44, 219, 67);
 }
 
 /* Button for next Questions */

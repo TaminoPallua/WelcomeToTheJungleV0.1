@@ -119,7 +119,7 @@ const questionsMedium = [
   },
   {
     question:
-      'Welches der folgenden Länder hat in den letzten Jahren die größte Fläche an Wald verloren, was sowohl den Klimawandel als auch den Verlust an Biodiversität beeinflusst hat?',
+      'Welches der Länder hat in den letzten Jahren die größte Fläche an Wald verloren, was  den Klimawandel  beeinflusst hat?',
     answers: [
       { text: 'Kanada', correct: false },
       { text: 'Brasilien', correct: true },
@@ -129,7 +129,7 @@ const questionsMedium = [
   },
   {
     question:
-      'Welches der folgenden Länder hat in den letzten Jahren die größte Fläche an Wald verloren, was sowohl den Klimawandel als auch den Verlust an Biodiversität beeinflusst hat?',
+      'Welches der folgenden Länder hat in den letzten Jahren die größte Fläche an Wald verloren, was  den Klimawandel  beeinflusst hat?',
     answers: [
       { text: 'Kanada', correct: false },
       { text: 'Brasilien', correct: true },
