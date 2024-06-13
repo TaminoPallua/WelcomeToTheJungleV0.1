@@ -130,3 +130,16 @@ document.addEventListener('keydown', (e) => {
     window.history.back();
   }
 });
+
+window.addEventListener('load', () => {
+  setTimeout(function () {
+    if (isFullScreen()) {
+      // console.log('truf');
+      worldElem.style.marginBottom = '-140px';
+    }
+  }, 100);
+});
+
+function isFullScreen() {
+  return window.screenTop == 0 ? true : false;
+}
